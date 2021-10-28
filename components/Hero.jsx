@@ -9,7 +9,7 @@ export default function Hero() {
         <S.TextContent>
           <h4>WELCOME TO GREENSHOP</h4>
           <h1>
-            LET'S MAKE A BETTER <span>PLANET</span>
+            LET&apos;S MAKE A BETTER <span>PLANET</span>
           </h1>
           <p className='description'>
             We are an online plant shop offering a wide range of cheap and
