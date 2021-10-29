@@ -7,7 +7,7 @@ export default function Navigation() {
     <S.Container>
       <S.Navigation>
         <Image
-          src='/logo.png'
+          src='/logo.webp'
           height='70'
           width='70'
           className='logo'

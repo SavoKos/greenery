@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='shortcut icon' type='image/jpg' href='/logo.png' />
+          <link rel='shortcut icon' type='image/jpg' href='/logo.webp' />
         </Head>
         <body>
           <Main />

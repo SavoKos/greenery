@@ -22,7 +22,7 @@ export default function Hero() {
           </S.ShopNow>
         </S.TextContent>
 
-        <Image src='/plant.png' height='350' width='300' alt='plant' />
+        <Image src='/plant.webp' height='350' width='300' alt='plant' />
       </S.Hero>
     </S.Container>
   );

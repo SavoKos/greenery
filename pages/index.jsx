@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import Hero from '@components/Hero';
 import Head from 'next/head';
+import Plants from '@components/Plants';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero />
+      <Plants />
     </>
   );
 }
