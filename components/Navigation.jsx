@@ -6,7 +6,13 @@ export default function Navigation() {
   return (
     <S.Container>
       <S.Navigation>
-        <Image src='/logo.png' height='70' width='70' className='logo' />
+        <Image
+          src='/logo.png'
+          height='70'
+          width='70'
+          className='logo'
+          alt='Greenery Logo'
+        />
         <S.Icons>
           <Icon type='icon-search' />
           <Icon type='icon-cart1' />
