@@ -2,6 +2,8 @@ import Navigation from '../components/Navigation';
 import Hero from '@components/Hero';
 import Head from 'next/head';
 import Plants from '@components/Plants';
+import Pagination from '@components/Pagination';
+import Footer from '@components/Footer';
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Plants />
+      <Footer />
     </>
   );
 }

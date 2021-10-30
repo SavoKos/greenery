@@ -6,13 +6,17 @@ export default function Navigation() {
   return (
     <S.Container>
       <S.Navigation>
-        <Image
-          src='/logo.webp'
-          height='70'
-          width='70'
-          className='logo'
-          alt='Greenery Logo'
-        />
+        <S.Logo>
+          <Image
+            src='/logo.webp'
+            height='70'
+            width='70'
+            className='logo'
+            alt='Greenery Logo'
+          />
+          <h3>GREENERY</h3>
+        </S.Logo>
+
         <S.Icons>
           <Icon type='icon-search' />
           <Icon type='icon-cart1' />
@@ -39,9 +43,15 @@ S.Navigation = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #dbece2;
   background-color: #fff;
+`;
 
-  .logo {
-    cursor: pointer;
+S.Logo = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  h3 {
+    color: ${({ theme }) => theme.colors.green};
   }
 `;
 
