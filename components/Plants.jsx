@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import FiltersLeft from './FiltersLeft';
 import FiltersTop from './FiltersTop';
@@ -8,25 +9,37 @@ import PlantItem from './PlantItem';
 
 function Plants() {
   const [plants, setPlants] = useState(null);
+  const { page } = useSelector((state) => state.page);
+  const pagesCount = Math.floor(plants?.length / 9);
+  const scrollRef = useRef(null);
 
   useEffect(
     () => axios.get('/plants.json').then((res) => setPlants(res.data)),
     []
   );
 
+  console.log(scrollRef.current);
+
+  const executeScroll = () =>
+    scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+
   return (
     <S.Container>
       <S.LeftSide>
         <FiltersLeft plants={plants} />
       </S.LeftSide>
-      <S.RightSide>
+      <S.RightSide ref={scrollRef}>
         <FiltersTop />
         <S.PlantsList>
-          {plants?.slice(0, 9)?.map((plant) => (
+          {plants?.slice((page - 1) * 9, page * 9)?.map((plant) => (
             <PlantItem plant={plant} key={plant.name} />
           ))}
         </S.PlantsList>
-        <Pagination plants={plants} />
+        <Pagination
+          plants={plants}
+          pagesCount={pagesCount}
+          executeScroll={executeScroll}
+        />
       </S.RightSide>
     </S.Container>
   );

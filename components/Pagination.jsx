@@ -1,23 +1,49 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { next, previous, goToSpecificPage } from 'redux/pageSlice';
 import styled from 'styled-components';
 import Icon from './Icon';
 
-function Pagination({ plants }) {
-  const pages = Math.floor(plants?.length / 9);
-  for (let i = 0; i < pages; i++) {}
-  console.log();
+function Pagination({ plants, pagesCount, executeScroll }) {
+  const { page } = useSelector((state) => state.page);
+  console.log(page);
+  const dispatch = useDispatch();
+
+  const goToSpecificPageHandler = (page) => {
+    dispatch(goToSpecificPage(page));
+    executeScroll();
+  };
+
+  const goToPreviousPage = () => {
+    dispatch(previous());
+    executeScroll();
+  };
+
+  const goToNextPage = () => {
+    dispatch(next());
+    executeScroll();
+  };
+
   return (
     <S.Pagination>
-      <S.Page>
-        <Icon type='icon--arrowleft' />
-      </S.Page>
-      {plants?.slice(0, pages)?.map((page, i) => (
-        <S.Page key={i}>
-          <h3>{i + 1}</h3>
+      {page > 1 && (
+        <S.Page onClick={executeScroll}>
+          <Icon type='icon--arrowleft' onClick={goToPreviousPage} />
+        </S.Page>
+      )}
+      {plants?.slice(0, pagesCount)?.map((_, i) => (
+        <S.Page
+          key={i}
+          onClick={() => goToSpecificPageHandler(i + 1)}
+          style={{ backgroundColor: i + 1 === page && '#50ba64' }}
+        >
+          <h3 style={{ color: i + 1 === page && '#fff' }}>{i + 1}</h3>
         </S.Page>
       ))}
-      <S.Page>
-        <Icon type='icon-iov-arrow-right' />
-      </S.Page>
+      {page < pagesCount && (
+        <S.Page>
+          <Icon type='icon-iov-arrow-right' onClick={goToNextPage} />
+        </S.Page>
+      )}
     </S.Pagination>
   );
 }
@@ -40,7 +66,6 @@ S.Page = styled.div`
   margin: 0 0.5rem;
   transition: all ease 0.3s;
   cursor: pointer;
-
   width: 2rem;
   height: 2rem;
 
