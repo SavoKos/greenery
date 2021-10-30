@@ -47,7 +47,7 @@ function FiltersLeft({ plants }) {
 const S = {};
 
 S.Filters = styled.div`
-  background-color: #fbfbfb;
+  background-color: #f5f5f5;
   width: 100%;
   padding: 1rem 2rem;
 `;

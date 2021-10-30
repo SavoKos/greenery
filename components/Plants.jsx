@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import FiltersLeft from './FiltersLeft';
 import FiltersTop from './FiltersTop';
+import Pagination from './Pagination';
 import PlantItem from './PlantItem';
 
 function Plants() {
@@ -21,10 +22,11 @@ function Plants() {
       <S.RightSide>
         <FiltersTop />
         <S.PlantsList>
-          {plants?.map((plant) => (
+          {plants?.slice(0, 9)?.map((plant) => (
             <PlantItem plant={plant} key={plant.name} />
           ))}
         </S.PlantsList>
+        <Pagination plants={plants} />
       </S.RightSide>
     </S.Container>
   );
