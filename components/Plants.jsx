@@ -36,27 +36,21 @@ function Plants() {
 const S = {};
 S.Container = styled.div`
   padding: 0 5%;
-  margin-top: 3rem;
+  margin-top: 10rem;
   display: flex;
-`;
 
-S.Hero = styled.div`
-  background-color: #f5f5f5;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding: 1.5rem;
-
-  @media screen and (min-width: 768px) {
-    padding: 3rem;
-    flex-direction: row;
+  @media screen and (min-width: 850px) {
+    margin-top: 3rem;
   }
 `;
 
 S.LeftSide = styled.div`
+  display: none;
   width: 50%;
+
+  @media screen and (min-width: 850px) {
+    display: block;
+  }
 
   @media screen and (min-width: 1250px) {
     width: 40%;
@@ -68,7 +62,10 @@ S.LeftSide = styled.div`
 `;
 S.RightSide = styled.div`
   width: 100%;
-  margin-left: 1rem;
+
+  @media screen and (min-width: 850px) {
+    margin-left: 1rem;
+  }
 `;
 
 S.PlantsList = styled.div`

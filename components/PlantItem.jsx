@@ -26,8 +26,12 @@ function PlantItem({ plant }) {
 const S = {};
 S.PlantImageContainer = styled.div`
   background-color: #f5f5f5;
-  padding: 3rem;
+  padding: 1.5rem;
   position: relative;
+
+  @media screen and (min-width: 992px) {
+    padding: 3rem;
+  }
 
   &:hover {
     .icons {
@@ -39,13 +43,22 @@ S.PlantImageContainer = styled.div`
 `;
 
 S.PlantItem = styled.div`
-  width: 30%;
-  max-width: 50%;
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 1rem 0.5rem;
   flex: 1 1 auto;
   cursor: pointer;
   border-top: 2px solid transparent;
   transition: all ease 0.3s;
+  width: 100%;
+
+  @media screen and (min-width: 576px) {
+    width: 33%;
+  }
+
+  @media screen and (min-width: 850px) {
+    margin: 1rem 0 1rem 2rem;
+    width: 30%;
+    max-width: 50%;
+  }
 
   &:hover {
     border-top: 2px solid ${({ theme }) => theme.colors.green};
@@ -70,16 +83,24 @@ S.Details = styled.div`
 `;
 
 S.Icons = styled.div`
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   left: 50%;
   bottom: 1%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, -10%);
   transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @media screen and (min-width: 850px) {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    visibility: hidden;
+  }
 
   .anticon {
-    font-size: 30px;
+    font-size: 24px;
     color: #3e3e3e;
     transition: all ease 0.3s;
     padding: 0 1rem;

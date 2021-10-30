@@ -61,7 +61,8 @@ S.Icons = styled.div`
 
   .anticon {
     font-size: 1.5rem;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
+    margin: 0 0.5rem;
     cursor: pointer;
 
     &.login-icon-only {

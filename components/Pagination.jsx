@@ -11,7 +11,7 @@ function Pagination({ plants }) {
         <Icon type='icon--arrowleft' />
       </S.Page>
       {plants?.slice(0, pages)?.map((page, i) => (
-        <S.Page>
+        <S.Page key={i}>
           <h3>{i + 1}</h3>
         </S.Page>
       ))}
@@ -40,8 +40,14 @@ S.Page = styled.div`
   margin: 0 0.5rem;
   transition: all ease 0.3s;
   cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  @media screen and (min-width: 768px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 
   .anticon {
     font-size: 20px;

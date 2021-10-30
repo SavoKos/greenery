@@ -54,27 +54,49 @@ S.Footer = styled.div`
   justify-content: space-between;
   margin-top: 5rem;
   padding: 1rem 0;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 S.Logo = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
   h3 {
     color: ${({ theme }) => theme.colors.green};
   }
 `;
 
-S.RightSide = styled.div``;
+S.RightSide = styled.div`
+  h3 {
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
+  }
+`;
 
 S.Payments = styled.div`
   display: flex;
   align-items: center;
 
   .anticon {
-    font-size: 60px;
-    margin-right: 1rem;
+    font-size: 40px;
+    margin-right: 0.5rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 60px;
+    }
   }
 
   .anticon:not(:nth-of-type(1)) {

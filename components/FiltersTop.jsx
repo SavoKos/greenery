@@ -15,6 +15,10 @@ function FiltersTop() {
         </h4>
         <Icon type='icon-iov-arrow-down' />
       </S.Sort>
+      <S.Icons>
+        <Icon type='icon-filter' />
+        <Icon type='icon-sort' />
+      </S.Icons>
     </S.FiltersTop>
   );
 }
@@ -24,17 +28,40 @@ const S = {};
 S.FiltersTop = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  padding-left: 2rem;
+
+  @media screen and (min-width: 850px) {
+    padding-left: 0.5rem;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .anticon {
+    color: #3e3e3e;
+    margin-left: 0.5rem;
+    font-size: 24px;
+  }
 `;
 
 S.Tabs = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+
+  @media screen and (min-width: 850px) {
+    width: fit-content;
+    margin-bottom: 0rem;
+
+    h4 {
+      margin-right: 1.5rem;
+    }
+  }
 
   h4 {
-    margin-right: 1.5rem;
-    font-weight: 500;
     border-bottom: 2px solid transparent;
     transition: all ease 0.3s;
     cursor: pointer;
@@ -46,22 +73,38 @@ S.Tabs = styled.div`
   }
 `;
 S.Sort = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   cursor: pointer;
+
+  @media screen and (min-width: 850px) {
+    display: flex;
+  }
 
   span {
     font-weight: 600;
   }
+`;
 
-  h4 {
-    font-weight: 500;
+S.AditionalFilters = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
+S.Icons = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media screen and (min-width: 850px) {
+    display: none;
   }
 
   .anticon {
     color: #3e3e3e;
-    margin-left: 0.5rem;
-    font-size: 24px;
+    cursor: pointer;
   }
 `;
 
