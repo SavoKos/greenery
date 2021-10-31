@@ -1,45 +1,35 @@
-import axios from 'axios';
-import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import FiltersLeft from './FiltersLeft';
-import FiltersTop from './FiltersTop';
+import FiltersLeft from './Filters/FiltersLeft';
+import FiltersTop from './Filters/FiltersTop';
 import Pagination from './Pagination';
 import PlantItem from './PlantItem';
 
-function Plants() {
-  const [plants, setPlants] = useState(null);
+function Plants({ scrollRef }) {
   const { page } = useSelector((state) => state.page);
+  const { plants } = useSelector((state) => state.filters);
+
   const pagesCount = Math.floor(plants?.length / 9);
-  const scrollRef = useRef(null);
-
-  useEffect(
-    () => axios.get('/plants.json').then((res) => setPlants(res.data)),
-    []
-  );
-
-  console.log(scrollRef.current);
 
   const executeScroll = () =>
     scrollRef.current.scrollIntoView({ behavior: 'smooth' });
 
+  const renderPlants = () => {
+    if (typeof plants === 'string') return <h2 className='error'>{plants}</h2>;
+    return plants
+      ?.slice((page - 1) * 12, page * 12)
+      ?.map((plant) => <PlantItem plant={plant} key={plant.name} />);
+  };
+
   return (
     <S.Container>
       <S.LeftSide>
-        <FiltersLeft plants={plants} />
+        <FiltersLeft />
       </S.LeftSide>
       <S.RightSide ref={scrollRef}>
         <FiltersTop />
-        <S.PlantsList>
-          {plants?.slice((page - 1) * 9, page * 9)?.map((plant) => (
-            <PlantItem plant={plant} key={plant.name} />
-          ))}
-        </S.PlantsList>
-        <Pagination
-          plants={plants}
-          pagesCount={pagesCount}
-          executeScroll={executeScroll}
-        />
+        <S.PlantsList>{renderPlants()}</S.PlantsList>
+        <Pagination pagesCount={pagesCount} executeScroll={executeScroll} />
       </S.RightSide>
     </S.Container>
   );
@@ -84,6 +74,11 @@ S.RightSide = styled.div`
 S.PlantsList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  .error {
+    margin-top: 5rem;
+  }
 `;
 
 export default Plants;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Icon from './Icon';
 
-export default function Hero() {
+export default function Hero({ scrollRef }) {
   return (
     <S.Container>
       <S.Hero>
@@ -16,7 +16,11 @@ export default function Hero() {
             trendy plants. Use our plants to create an unique Urban Jungle.
             Order your favorite plants!
           </p>
-          <S.ShopNow>
+          <S.ShopNow
+            onClick={() =>
+              scrollRef.current.scrollIntoView({ behavior: 'smooth' })
+            }
+          >
             <Icon type='icon-shopping' />
             <p>Shop Now</p>
           </S.ShopNow>

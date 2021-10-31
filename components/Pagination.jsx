@@ -3,9 +3,9 @@ import { next, previous, goToSpecificPage } from 'redux/pageSlice';
 import styled from 'styled-components';
 import Icon from './Icon';
 
-function Pagination({ plants, pagesCount, executeScroll }) {
+function Pagination({ pagesCount, executeScroll }) {
   const { page } = useSelector((state) => state.page);
-  console.log(page);
+  const { plants } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
 
   const goToSpecificPageHandler = (page) => {
@@ -23,11 +23,13 @@ function Pagination({ plants, pagesCount, executeScroll }) {
     executeScroll();
   };
 
+  if (typeof plants === 'string') return <div></div>;
+
   return (
     <S.Pagination>
       {page > 1 && (
-        <S.Page onClick={executeScroll}>
-          <Icon type='icon--arrowleft' onClick={goToPreviousPage} />
+        <S.Page onClick={goToPreviousPage}>
+          <Icon type='icon--arrowleft' />
         </S.Page>
       )}
       {plants?.slice(0, pagesCount)?.map((_, i) => (
@@ -40,8 +42,8 @@ function Pagination({ plants, pagesCount, executeScroll }) {
         </S.Page>
       ))}
       {page < pagesCount && (
-        <S.Page>
-          <Icon type='icon-iov-arrow-right' onClick={goToNextPage} />
+        <S.Page onClick={goToNextPage}>
+          <Icon type='icon-iov-arrow-right' />
         </S.Page>
       )}
     </S.Pagination>

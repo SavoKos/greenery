@@ -16,7 +16,10 @@ function PlantItem({ plant }) {
       </S.PlantImageContainer>
       <S.Details>
         <h4 className='name'>{plant.name}</h4>
-        <h4 className='price'>$ {plant.price}</h4>
+        <S.Price>
+          <h4 className='price'>$ {plant.price}</h4>
+          {plant.oldprice && <h4 className='oldprice'>$ {plant.oldprice}</h4>}
+        </S.Price>
       </S.Details>
     </S.PlantItem>
   );
@@ -52,12 +55,12 @@ S.PlantItem = styled.div`
 
   @media screen and (min-width: 576px) {
     width: 33%;
+    max-width: 350px;
   }
 
   @media screen and (min-width: 850px) {
     margin: 1rem 0 1rem 2rem;
     width: 30%;
-    max-width: 50%;
   }
 
   &:hover {
@@ -79,6 +82,17 @@ S.Details = styled.div`
 
   .price {
     color: ${({ theme }) => theme.colors.green};
+  }
+`;
+
+S.Price = styled.div`
+  display: flex;
+  align-items: center;
+
+  .oldprice {
+    margin-left: 1.5rem;
+    text-decoration: line-through;
+    color: #aaa;
   }
 `;
 
