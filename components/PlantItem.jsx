@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import Icon from './Icon';
+import Icon from './UI/Icon';
 
 function PlantItem({ plant }) {
   return (

@@ -15,26 +15,45 @@ export const filtersSlice = createSlice({
   reducers: {
     updatePlants: (state) => {
       const initialPlants = [...state.initialPlants];
-      let filteredPlants = initialPlants;
+      const habitState = [...state.habit];
+      const sizeState = [...state.size];
 
-      console.log('sizeee');
+      let filteredPlants = initialPlants;
 
       if (state.tabsFilter !== 'all')
         filteredPlants = filteredPlants.filter(
           (plant) => plant.filter === state.tabsFilter
         );
 
-      if ([...state.habit].length > 0)
+      if (habitState.length > 0)
         filteredPlants = filteredPlants.filter((plant) =>
-          [...state.habit].includes(plant.habit)
+          habitState.includes(plant.habit)
         );
 
-      if ([...state.size].length > 0)
+      if (sizeState.length > 0)
         filteredPlants = filteredPlants.filter((plant) =>
-          [...state.size].includes(plant.size)
+          sizeState.includes(plant.size)
         );
 
-      console.log(filteredPlants);
+      if (state.sort !== 'default') {
+        switch (state.sort) {
+          case 'priceasc':
+            filteredPlants = filteredPlants.sort((a, b) => a.price - b.price);
+            break;
+          case 'pricedesc':
+            filteredPlants = filteredPlants
+              .sort((a, b) => a.price - b.price)
+              .reverse();
+            break;
+          case 'alphabetical':
+            filteredPlants = filteredPlants.sort((a, b) =>
+              a.name.localeCompare(b.name)
+            );
+            break;
+          default:
+            return filteredPlants;
+        }
+      }
 
       state.plants =
         filteredPlants.length === 0

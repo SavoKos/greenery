@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { next, previous, goToSpecificPage } from 'redux/pageSlice';
 import styled from 'styled-components';
-import Icon from './Icon';
+import Icon from './UI/Icon';
 
 function Pagination({ pagesCount, executeScroll }) {
   const { page } = useSelector((state) => state.page);

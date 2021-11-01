@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateHabit, updatePlants, updateSize } from 'redux/filtersSlice';
+import Icon from '@components/UI/Icon';
 
-function FiltersLeft() {
+function FiltersLeft({ setFilterActive, executeScroll }) {
   const { size, habit, initialPlants } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
 
@@ -12,12 +13,14 @@ function FiltersLeft() {
   const habitHandler = (value) => {
     if (!habit.includes(value)) {
       dispatch(updateHabit([...habit, value]));
+      executeScroll();
       return dispatch(updatePlants());
     }
 
     const updatedHabit = [...habit].filter((habit) => habit !== value);
     dispatch(updateHabit(updatedHabit));
     dispatch(updatePlants());
+    executeScroll();
   };
 
   const allSizes = initialPlants?.map((plant) => plant?.size);
@@ -25,12 +28,14 @@ function FiltersLeft() {
   const sizeHandler = (value) => {
     if (!size.includes(value)) {
       dispatch(updateSize([...size, value]));
+      executeScroll();
       return dispatch(updatePlants());
     }
 
     const updatedSize = [...size].filter((size) => size !== value);
     dispatch(updateSize(updatedSize));
     dispatch(updatePlants());
+    executeScroll();
   };
 
   const capitalize = (word) => word[0].toUpperCase() + word.slice(1);
@@ -42,7 +47,12 @@ function FiltersLeft() {
 
   return (
     <>
-      <S.Filters>
+      <S.Filters className='filter'>
+        <Icon
+          type='icon-searchclose'
+          className='close-sidebar'
+          onClick={() => setFilterActive(false)}
+        />
         <S.FilterContainer>
           <h3 className='habit'>Habit</h3>
           {habitList.map((value, i) => (
@@ -80,6 +90,21 @@ S.Filters = styled.div`
   background-color: #f5f5f5;
   width: 100%;
   padding: 1rem 2rem;
+
+  .close-sidebar {
+    @media screen and (min-width: 850px) {
+      display: none;
+    }
+
+    cursor: pointer;
+    position: absolute;
+    color: ${({ theme }) => theme.colors.green};
+    top: 1rem;
+    right: 1rem;
+    z-index: 6;
+    font-size: 28px;
+    border-radius: 50%;
+  }
 `;
 
 S.FilterContainer = styled.div`

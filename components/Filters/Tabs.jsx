@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updatePlants, updateTabsFilter } from 'redux/filtersSlice';
 import styled from 'styled-components';
 
-function Tabs() {
+function Tabs({ executeScroll }) {
   const { tabsFilter } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
 
@@ -16,6 +16,7 @@ function Tabs() {
   const updateTabsHandler = (value) => {
     dispatch(updateTabsFilter(value));
     dispatch(updatePlants());
+    executeScroll();
   };
 
   return (
