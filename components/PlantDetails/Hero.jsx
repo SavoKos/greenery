@@ -12,7 +12,7 @@ function Hero({ plant }) {
       <S.Images>
         <S.SmallContainer>
           {plant.allImages.map((img) => (
-            <S.Small onClick={() => setImage(img)}>
+            <S.Small onClick={() => setImage(img)} key={img}>
               <Image src={img} layout='fill' />
             </S.Small>
           ))}
@@ -31,7 +31,7 @@ function Hero({ plant }) {
         <p>
           {plant.description.slice(
             0,
-            plant.description.slice(150, 600).indexOf('.') + 150
+            plant.description.slice(200, 600).indexOf('.') + 200
           )}
           .
         </p>

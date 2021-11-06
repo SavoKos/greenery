@@ -28,7 +28,7 @@ function Footer() {
       </S.Footer>
       <h4 className='copyright'>
         &copy; Greenery by{' '}
-        <a href='https://savokos.com' target='_blank'>
+        <a href='https://savokos.com' target='_blank' rel='noreferrer'>
           Savo Kos
         </a>
         . All Rights Reserved.
