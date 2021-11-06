@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 const theme = {
   colors: {
     green: '#50ba64',
+    border: '#dbece2',
   },
 };
 

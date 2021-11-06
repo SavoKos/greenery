@@ -1,27 +1,38 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Icon from './UI/Icon';
+import Link from 'next/link';
 
 function PlantItem({ plant }) {
+  const calculateDiscount = () =>
+    Math.round((100 * (plant.oldprice - plant.price)) / plant.oldprice);
+
   return (
-    <S.PlantItem>
-      <S.PlantImageContainer>
-        <S.PlantImage>
-          <Image src={plant.image} layout='fill' />
-        </S.PlantImage>
-        <S.Icons className='icons'>
-          <Icon type='icon-tubiaozhizuomoban-' className='heart' />
-          <Icon type='icon-cart1' className='cart' />
-        </S.Icons>
-      </S.PlantImageContainer>
-      <S.Details>
-        <h4 className='name'>{plant.name}</h4>
-        <S.Price>
-          <h4 className='price'>$ {plant.price}</h4>
-          {plant.oldprice && <h4 className='oldprice'>$ {plant.oldprice}</h4>}
-        </S.Price>
-      </S.Details>
-    </S.PlantItem>
+    <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
+      <S.PlantItem>
+        <S.PlantImageContainer>
+          <S.PlantImage>
+            <Image src={plant.image} layout='fill' />
+          </S.PlantImage>
+          <S.Icons className='icons'>
+            <Icon type='icon-tubiaozhizuomoban-' className='heart' />
+            <Icon type='icon-cart1' className='cart' />
+          </S.Icons>
+          {plant?.oldprice && (
+            <S.Discount>
+              <h4>{calculateDiscount()}% OFF</h4>
+            </S.Discount>
+          )}
+        </S.PlantImageContainer>
+        <S.Details>
+          <h4 className='name'>{plant.name}</h4>
+          <S.Price>
+            <h4 className='price'>$ {plant.price}</h4>
+            {plant.oldprice && <h4 className='oldprice'>$ {plant.oldprice}</h4>}
+          </S.Price>
+        </S.Details>
+      </S.PlantItem>
+    </Link>
   );
 }
 
@@ -126,6 +137,19 @@ S.Icons = styled.div`
     &.cart:hover {
       color: ${({ theme }) => theme.colors.green};
     }
+  }
+`;
+
+S.Discount = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: ${({ theme }) => theme.colors.green};
+
+  h4 {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
   }
 `;
 

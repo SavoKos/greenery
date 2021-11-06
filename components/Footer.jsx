@@ -26,7 +26,13 @@ function Footer() {
           </S.Payments>
         </S.RightSide>
       </S.Footer>
-      <h4 className='copyright'>&copy; Greenery. All Rights Reserved.</h4>
+      <h4 className='copyright'>
+        &copy; Greenery by{' '}
+        <a href='https://savokos.com' target='_blank'>
+          Savo Kos
+        </a>
+        . All Rights Reserved.
+      </h4>
     </S.Container>
   );
 }
@@ -41,6 +47,10 @@ S.Container = styled.div`
     text-align: center;
     font-weight: 500;
     margin: 1rem 0;
+
+    a {
+      color: ${({ theme }) => theme.colors.green};
+    }
   }
 `;
 

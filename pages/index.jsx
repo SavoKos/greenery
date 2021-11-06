@@ -4,13 +4,15 @@ import Head from 'next/head';
 import Plants from '@components/Plants';
 import Footer from '@components/Footer';
 import { useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateInitialPlants, updatePlants } from 'redux/filtersSlice';
 import axios from 'axios';
+import Spinner from '@components/UI/Spinner';
 
 export default function Home() {
   const scrollRef = useRef(null);
   const dispatch = useDispatch();
+  const { plants } = useSelector((state) => state.filters);
 
   useEffect(
     () =>
@@ -20,6 +22,8 @@ export default function Home() {
       }),
     []
   );
+
+  if (plants.length < 1) return <Spinner />;
 
   return (
     <>

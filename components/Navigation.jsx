@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Icon from './UI/Icon';
+import Router from 'next/router';
 
 export default function Navigation() {
   return (
     <S.Container>
       <S.Navigation>
-        <S.Logo>
+        <S.Logo onClick={() => Router.push('/')}>
           <Image
             src='/logo.webp'
             height='70'
@@ -18,7 +19,7 @@ export default function Navigation() {
         </S.Logo>
 
         <S.Icons>
-          <Icon type='icon-search' />
+          <Icon type='icon-tubiaozhizuomoban-' />
           <Icon type='icon-cart1' />
           <Icon type='icon-login' className='login-icon-only' />
           <S.Login>
@@ -41,7 +42,7 @@ S.Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #dbece2;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   background-color: #fff;
 `;
 

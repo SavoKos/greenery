@@ -1,12 +1,26 @@
 [
   {
-    "name": "African violet",
-    "price": "59.00",
-    "description": "Saintpaulias are widely cultivated as house plants. Hairy often stemless perennial herbs, used for greenhouse flowering, the blossoms providing an attractive blue, violet, purple, white, pink and even green. Flowers can be single or double, solid or striped. 'Wasp' type flowers have the upper two flower petals independently fused forming a tube. There are also compound leaves on some, that are called 'bustled'. Over 2,000 cultivars have been selected, with a very wide variety of flower and leaf colors, shapes, sizes, patterns and textures. Cultivars are classified as Large, Standard, Trailing, Semi-mini, Mini, and Micro with Micro being the smallest. Leaves long-petioled, ovate: peduncles radical (or axillary in the caulescent species), 1-5 in. high, bearing several (or 1) fls. in a loose cyme: calyx small, deeply 5-lobed; corolla wide-campanulate, tube short, the lobes elliptic, blue; perfect stamens 2; ovary hairy: caps, oblong, locuhcidally 2-valved; seeds small, ellipsoid.",
-    "size": "small",
+    "name": "Aloe Vera",
+    "price": "95.00",
+    "description": "Aloe vera, also known as the medicinal aloe, is a species of succulent plant that probably originated in Northern Africa, the Canary islands and Cape Verde. Aloe vera grows in arid climates and is widely distributed in Africa and other arid areas. The species is frequently cited as being used in herbal medicine. Aloe vera is a stemless or very short-stemmed succulent plant growing to 60–100 cm (24–39 in) tall, spreading by offsets. The leaves are thick and fleshy, green to grey-green, with some varieties showing white flecks on the upper and lower stem surfaces. The margin of the leaf is serrated and has small white teeth. The flowers are produced in summer on a spike up to 90 cm in tall, each flower pendulous, with a yellow tubular corolla 2–3 cm (0.8–1.2 in) long. Like other Aloe species, Aloe vera forms arbuscular mycorrhiza, a symbiosis that allows the plant better access to mineral nutrients in soil.",
+    "size": "medium",
+    "habit": "cacti-succulent",
+    "image": "/images/Aloe Vera/1.webp",
+    "allImages": [
+      "/images/Aloe Vera/1.webp",
+      "/images/Aloe Vera/2.webp",
+      "/images/Aloe Vera/3.webp"
+    ]
+  },
+
+  {
+    "name": "Basil",
+    "price": "128.00",
+    "description": "Basil (Ocimum basilicum) is a tender low-growing herb that is grown as a perennial in warm, tropical climates, and an annual elsewhere. Basil is originally native to Iran, India and other tropical regions of Asia, having been cultivated there for more than 5,000 years. There are many varieties of basil, that which is used in Italian food is typically called sweet basil, as opposed to Thai basil or holy basil, which are used in Asia. It grows to between 30–130 cm tall, with opposite, light green, silky leaves 3–11 cm long and 1–6 cm broad. The flowers are quite big, white in color and arranged in a terminal spike. Unusual among Lamiaceae, the four stamens and the pistil are not pushed under the upper lip of the corolla, but lay over the inferior. After entomophilous pollination, the corolla falls off and four round achenes develop inside the bilabiate calyx. The plant tastes somewhat like anise, with a strong, pungent, sweet smell. Basil is very sensitive to cold, with best growth in hot, dry conditions. While most common varieties are treated as annuals, some are perennial, including African Blue and Holy Thai basil. The word basil comes from the Greek βασιλεύς (basileus), meaning 'king'.",
+    "size": "medium",
     "habit": "herbaceous",
     "filter": "new",
-    "image": "/images/African Violet.webp"
+    "image": "/images/Basil.webp"
   },
   {
     "name": "Alocasia Zebrina",
@@ -18,40 +32,6 @@
     "image": "/images/Alocasia Zebrina.webp"
   },
   {
-    "name": "Aloe Vera",
-    "price": "95.00",
-    "description": "Aloe vera, also known as the medicinal aloe, is a species of succulent plant that probably originated in Northern Africa, the Canary islands and Cape Verde. Aloe vera grows in arid climates and is widely distributed in Africa and other arid areas. The species is frequently cited as being used in herbal medicine. Aloe vera is a stemless or very short-stemmed succulent plant growing to 60–100 cm (24–39 in) tall, spreading by offsets. The leaves are thick and fleshy, green to grey-green, with some varieties showing white flecks on the upper and lower stem surfaces. The margin of the leaf is serrated and has small white teeth. The flowers are produced in summer on a spike up to 90 cm in tall, each flower pendulous, with a yellow tubular corolla 2–3 cm (0.8–1.2 in) long. Like other Aloe species, Aloe vera forms arbuscular mycorrhiza, a symbiosis that allows the plant better access to mineral nutrients in soil.",
-    "size": "medium",
-    "habit": "cacti-succulent",
-    "image": "/images/Aloe Vera.webp"
-  },
-  {
-    "name": "Bamboo Palm",
-    "price": "105.00",
-    "description": "Has long bamboo-like canes. The canes grow to form a dense clusters of fronds with, dark green to grey leaves. Chamaedorea seifrizii, resembles bamboo in appearance. It grows to about 7 feet. Usually plants sold in nurseries or seen in collections are clustering with about 20 or 30 individual plants. Each stem is long and slender with 'nodes' very similar in appearance to Bamboo. Although plants are commercially clumped together to form shrub-like specimens, this palm naturally spreads by suckers or offshoots also similar to Bamboo. The stems are tall and have about 10-15 fronds each with about 12 dark green pinnate leaflets. As the old fronds die, these should be trimmed off and the leaf bases or sheath allowed to dry out. Later these should be removed as this promotes good plant hygiene and exposes the attractive light green 'bamboo stem'.",
-    "size": "tall",
-    "habit": "bamboo",
-    "filter": "sale",
-    "oldprice": "125.00",
-    "image": "/images/Bamboo Palm.webp"
-  },
-  {
-    "name": "Bamboo",
-    "price": "50.00",
-    "description": "Bamboo are a group of perennial evergreen (except for certain temperate species) plants in the true grass family Poaceae, subfamily Bambusoideae, tribe Bambuseae. Giant bamboos are the largest members of the grass family. Bamboos are also the fastest growing plants in the world. They are capable of growing up to 60 centimeters (24 in.) or more per day due to a unique rhizome-dependent system. However, this astounding growth rate is highly dependent on local soil and climatic conditions. There are more than 70 genera divided into about 1,000 species. They are found in diverse climates, from cold mountains to hot tropical regions. They occur across East Asia, from 50°N latitude in Sakhalin[citation needed] through to Northern Australia, and west to India and the Himalayas. They also occur in sub-Saharan Africa, and in the Americas from the Mid-Atlantic United States south to Argentina and Chile, reaching their southernmost point anywhere, at 47°S latitude. Continental Europe is not known to have any native species of bamboo.",
-    "size": "tall",
-    "habit": "bamboo",
-    "image": "/images/Bamboo.webp"
-  },
-  {
-    "name": "Banana Tree",
-    "price": "159.00",
-    "description": "Adaptation Bananas and plantains are today grown in every humid tropical region and constitutes the 4th largest fruit crop of the world. The plant needs 10 - 15 months of frost-free conditions to produce a flower stalk. All but the hardiest varieties stop growing when the temperature drops below 12° C (53° F). Growth of the plant begins to slow down at about 27° C (80° F) and stop entirely when the temperature reaches 38° C (100° F). High temperatures and bright sunlight will also scorch leaves and fruit, although bananas grow best in full sun. Freezing temperatures will kill the foliage. In most areas bananas require wind protection for best appearance and maximum yield. They are also susceptible to being blown over. Bananas, especially dwarf varieties, make good container specimens if given careful attention. The plant will also need periodic repotting as the old plant dies back and new plants develop. Growth Habit: Bananas are fast-growing herbaceous perennials arising from underground rhizomes. The fleshy stalks or pseudostems formed by upright concentric layers of leaf sheaths constitute the functional trunks. The true stem begins as an underground corm which grows upwards, pushing its way out through the center of the stalk 10-15 months after planting, eventually producing the terminal inflorescence which will later bear the fruit. Each stalk produces one huge flower cluster and then dies. New stalks then grow from the rhizome. Banana plants are extremely decorative, ranking next to palm trees for the tropical feeling they lend to the landscape.",
-    "size": "tall",
-    "habit": "tree",
-    "image": "/images/Banana Tree.webp"
-  },
-  {
     "name": "Gerbera",
     "price": "83.00",
     "description": "Gerbera species bear a large capitulum with striking, two-lipped ray florets in yellow, orange, white, pink or red colours. The capitulum, which has the appearance of a single flower, is actually composed of hundreds of individual flowers. The morphology of the flowers varies depending on their position in the capitulum. The flower heads can be as small as 7 cm (Gerbera mini 'Harley') in diameter or up to 12 cm (Gerbera ‘Golden Serena’). Gerbera is very popular and widely used as a decorative garden plant or as cut flowers. The domesticated cultivars are mostly a result of a cross between Gerbera jamesonii and another South African species Gerbera viridifolia. The cross is known as Gerbera hybrida. Thousands of cultivars exist. They vary greatly in shape and size. Colours include white, yellow, orange, red, and pink. The centre of the flower is sometimes black. Often the same flower can have petals of several different colours. Gerbera is also important commercially. It is the fifth most used cut flower in the world (after rose, carnation, chrysanthemum, and tulip).[citation needed] It is also used as a model organism in studying flower formation. Gerbera contains naturally occurring coumarin derivatives. Hairy, stemless herbs. Perennials which can be treated like annualsRH. Leaves may spread or come up from a basal rosette, are entire to dentate (or rarely pinnately lobed), petiolate, and hairy underneathRH. Gerbera (pronounced /ˈdʒɜrbərə/ or Template:IPA-en) L. is a genus of ornamental plants from the sunflower family (Asteraceae).Gerbera is also commonly known as: African Daisy, Transvaal Daisy, and Barberton Daisy. The gerbera daisy, known as the ~Transvaal Daisy,~ originated in South Africa. It has approximately 30 species in the wild, extending to South America, Africa and tropical Asia. This plant is attractive to bees, butterflies and/or birds. This plant is resistant to deer.",
@@ -59,23 +39,6 @@
     "habit": "herbaceous",
     "filter": "new",
     "image": "/images/Gerbera.webp"
-  },
-  {
-    "name": "Basil",
-    "price": "128.00",
-    "description": "Basil (Ocimum basilicum) is a tender low-growing herb that is grown as a perennial in warm, tropical climates, and an annual elsewhere. Basil is originally native to Iran, India and other tropical regions of Asia, having been cultivated there for more than 5,000 years. There are many varieties of basil, that which is used in Italian food is typically called sweet basil, as opposed to Thai basil or holy basil, which are used in Asia. It grows to between 30–130 cm tall, with opposite, light green, silky leaves 3–11 cm long and 1–6 cm broad. The flowers are quite big, white in color and arranged in a terminal spike. Unusual among Lamiaceae, the four stamens and the pistil are not pushed under the upper lip of the corolla, but lay over the inferior. After entomophilous pollination, the corolla falls off and four round achenes develop inside the bilabiate calyx. The plant tastes somewhat like anise, with a strong, pungent, sweet smell. Basil is very sensitive to cold, with best growth in hot, dry conditions. While most common varieties are treated as annuals, some are perennial, including African Blue and Holy Thai basil. The word basil comes from the Greek βασιλεύς (basileus), meaning 'king'.",
-    "size": "medium",
-    "habit": "herbaceous",
-    "filter": "new",
-    "image": "/images/Basil.webp"
-  },
-  {
-    "name": "Begonia",
-    "price": "157.00",
-    "description": "Because of their sometimes showy flowers of white, pink, scarlet or yellow color and often attractively marked leaves, many species and innumerable hybrids and cultivars are cultivated. The genus is unusual in that species throughout the genus, even those coming from different continents, can frequently be hybridized with each other, and this has led to an enormous number of cultivars. The American Begonia Society classifies begonias into several major groups: cane-like, shrub-like, tuberous, rhizomatous, semperflorens, rex, trailing-scandent, or thick-stemmed. For the most part these groups do not correspond to any formal taxonomic groupings or phylogeny and many species and hybrids have characteristics of more than one group, or fit well into none of them.",
-    "size": "small",
-    "habit": "herbaceous",
-    "image": "/images/Begonia.webp"
   },
   {
     "name": "Bird of Paradise (Strelitzia reginae)",
@@ -94,6 +57,16 @@
     "image": "/images/Boston Fern.webp"
   },
   {
+    "name": "Bamboo Palm",
+    "price": "105.00",
+    "description": "Has long bamboo-like canes. The canes grow to form a dense clusters of fronds with, dark green to grey leaves. Chamaedorea seifrizii, resembles bamboo in appearance. It grows to about 7 feet. Usually plants sold in nurseries or seen in collections are clustering with about 20 or 30 individual plants. Each stem is long and slender with 'nodes' very similar in appearance to Bamboo. Although plants are commercially clumped together to form shrub-like specimens, this palm naturally spreads by suckers or offshoots also similar to Bamboo. The stems are tall and have about 10-15 fronds each with about 12 dark green pinnate leaflets. As the old fronds die, these should be trimmed off and the leaf bases or sheath allowed to dry out. Later these should be removed as this promotes good plant hygiene and exposes the attractive light green 'bamboo stem'.",
+    "size": "tall",
+    "habit": "bamboo",
+    "filter": "sale",
+    "oldprice": "125.00",
+    "image": "/images/Bamboo Palm.webp"
+  },
+  {
     "name": "Calathea",
     "price": "155.00",
     "description": "Calathea is a genus of flowering plants belonging to the family Marantaceae. They are commonly called calatheas or (like their relatives) prayer plants. About 200 species formerly assigned to Calathea are now in the genus Goeppertia. Calathea currently contains around 60 species. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescences. The young leaves and bracts can retain pools of water, called phytotelmata, that provide habitat for many invertebrates.",
@@ -109,6 +82,15 @@
     "habit": "shrub",
     "filter": "new",
     "image": "/images/Chinese Hibiscus.webp"
+  },
+  {
+    "name": "African violet",
+    "price": "59.00",
+    "description": "Saintpaulias are widely cultivated as house plants. Hairy often stemless perennial herbs, used for greenhouse flowering, the blossoms providing an attractive blue, violet, purple, white, pink and even green. Flowers can be single or double, solid or striped. 'Wasp' type flowers have the upper two flower petals independently fused forming a tube. There are also compound leaves on some, that are called 'bustled'. Over 2,000 cultivars have been selected, with a very wide variety of flower and leaf colors, shapes, sizes, patterns and textures. Cultivars are classified as Large, Standard, Trailing, Semi-mini, Mini, and Micro with Micro being the smallest. Leaves long-petioled, ovate: peduncles radical (or axillary in the caulescent species), 1-5 in. high, bearing several (or 1) fls. in a loose cyme: calyx small, deeply 5-lobed; corolla wide-campanulate, tube short, the lobes elliptic, blue; perfect stamens 2; ovary hairy: caps, oblong, locuhcidally 2-valved; seeds small, ellipsoid.",
+    "size": "small",
+    "habit": "herbaceous",
+    "filter": "new",
+    "image": "/images/African Violet.webp"
   },
   {
     "name": "Cordyline",
@@ -167,6 +149,14 @@
     "image": "/images/Guava.webp"
   },
   {
+    "name": "Begonia",
+    "price": "157.00",
+    "description": "Because of their sometimes showy flowers of white, pink, scarlet or yellow color and often attractively marked leaves, many species and innumerable hybrids and cultivars are cultivated. The genus is unusual in that species throughout the genus, even those coming from different continents, can frequently be hybridized with each other, and this has led to an enormous number of cultivars. The American Begonia Society classifies begonias into several major groups: cane-like, shrub-like, tuberous, rhizomatous, semperflorens, rex, trailing-scandent, or thick-stemmed. For the most part these groups do not correspond to any formal taxonomic groupings or phylogeny and many species and hybrids have characteristics of more than one group, or fit well into none of them.",
+    "size": "small",
+    "habit": "herbaceous",
+    "image": "/images/Begonia.webp"
+  },
+  {
     "name": "Kumquat",
     "price": "111.00",
     "description": "Kumquats or cumquats are a group of small fruit-bearing trees in the flowering plant family Rutaceae, either forming the genus Fortunella, or placed within Citrus sensu lato. The edible fruit closely resembles that of the orange (Citrus sinensis), but it is much smaller and ovular, being approximately the size and shape of an olive. They are slow-growing evergreen shrubs or short trees, from 2.5 to 4.5 m tall, with sparse branches, sometimes bearing small thorns. The leaves are dark glossy green, and the flowers white, similar to other citrus flowers, borne singly or clustered in the leaf-axils. The kumquat tree produces 30 to 50 fruit each year.Template:Dubious The tree can be hydrophytic, with the fruit often found floating on water near shore during the ripe season. The plant is native to south Asia and the Asia-Pacific. The earliest historical reference to kumquats appears in literature of China in the 12th century. They have long been cultivated in Japan, Taiwan, the Philippines and southeast Asia. They were introduced to Europe in 1846 by Robert Fortune, collector for the London Horticultural Society, and shortly thereafter into North America.",
@@ -198,6 +188,14 @@
     "habit": "orchid",
     "filter": "new",
     "image": "/images/Orchid.webp"
+  },
+  {
+    "name": "Banana Tree",
+    "price": "159.00",
+    "description": "Adaptation Bananas and plantains are today grown in every humid tropical region and constitutes the 4th largest fruit crop of the world. The plant needs 10 - 15 months of frost-free conditions to produce a flower stalk. All but the hardiest varieties stop growing when the temperature drops below 12° C (53° F). Growth of the plant begins to slow down at about 27° C (80° F) and stop entirely when the temperature reaches 38° C (100° F). High temperatures and bright sunlight will also scorch leaves and fruit, although bananas grow best in full sun. Freezing temperatures will kill the foliage. In most areas bananas require wind protection for best appearance and maximum yield. They are also susceptible to being blown over. Bananas, especially dwarf varieties, make good container specimens if given careful attention. The plant will also need periodic repotting as the old plant dies back and new plants develop. Growth Habit: Bananas are fast-growing herbaceous perennials arising from underground rhizomes. The fleshy stalks or pseudostems formed by upright concentric layers of leaf sheaths constitute the functional trunks. The true stem begins as an underground corm which grows upwards, pushing its way out through the center of the stalk 10-15 months after planting, eventually producing the terminal inflorescence which will later bear the fruit. Each stalk produces one huge flower cluster and then dies. New stalks then grow from the rhizome. Banana plants are extremely decorative, ranking next to palm trees for the tropical feeling they lend to the landscape.",
+    "size": "tall",
+    "habit": "tree",
+    "image": "/images/Banana Tree.webp"
   },
   {
     "name": "Hibiscus",
@@ -240,6 +238,14 @@
     "size": "small",
     "habit": "vine-climber",
     "image": "/images/Jasmine.webp"
+  },
+  {
+    "name": "Bamboo",
+    "price": "50.00",
+    "description": "Bamboo are a group of perennial evergreen (except for certain temperate species) plants in the true grass family Poaceae, subfamily Bambusoideae, tribe Bambuseae. Giant bamboos are the largest members of the grass family. Bamboos are also the fastest growing plants in the world. They are capable of growing up to 60 centimeters (24 in.) or more per day due to a unique rhizome-dependent system. However, this astounding growth rate is highly dependent on local soil and climatic conditions. There are more than 70 genera divided into about 1,000 species. They are found in diverse climates, from cold mountains to hot tropical regions. They occur across East Asia, from 50°N latitude in Sakhalin[citation needed] through to Northern Australia, and west to India and the Himalayas. They also occur in sub-Saharan Africa, and in the Americas from the Mid-Atlantic United States south to Argentina and Chile, reaching their southernmost point anywhere, at 47°S latitude. Continental Europe is not known to have any native species of bamboo.",
+    "size": "tall",
+    "habit": "bamboo",
+    "image": "/images/Bamboo.webp"
   },
   {
     "name": "Narcissus",
