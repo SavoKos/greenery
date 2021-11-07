@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Icon from './UI/Icon';
 import Router from 'next/router';
+import { setLoginActive } from 'redux/authSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Navigation() {
+  const dispatch = useDispatch();
+
   return (
     <S.Container>
       <S.Navigation>
@@ -22,7 +26,7 @@ export default function Navigation() {
           <Icon type='icon-tubiaozhizuomoban-' />
           <Icon type='icon-cart1' />
           <Icon type='icon-login' className='login-icon-only' />
-          <S.Login>
+          <S.Login onClick={() => dispatch(setLoginActive(true))}>
             <Icon type='icon-login' />
             <p>Login</p>
           </S.Login>

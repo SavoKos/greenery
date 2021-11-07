@@ -11,7 +11,7 @@ function RelatedProducts({ plant }) {
       <h3>Related Products</h3>
       <S.Plants>
         {relatedPlants.map((plant) => (
-          <PlantItem plant={plant} />
+          <PlantItem plant={plant} key={plant.name} />
         ))}
       </S.Plants>
     </S.Related>
