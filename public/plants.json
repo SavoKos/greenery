@@ -20,7 +20,12 @@
     "size": "medium",
     "habit": "herbaceous",
     "filter": "new",
-    "image": "/images/Basil.webp"
+    "image": "/images/Basil/1.webp",
+    "allImages": [
+      "/images/Basil/1.webp",
+      "/images/Basil/2.webp",
+      "/images/Basil/3.webp"
+    ]
   },
   {
     "name": "Alocasia Zebrina",
@@ -29,7 +34,12 @@
     "size": "medium",
     "habit": "tropical",
     "filter": "new",
-    "image": "/images/Alocasia Zebrina.webp"
+    "image": "/images/Alocasia Zebrina/1.webp",
+    "allImages": [
+      "/images/Alocasia Zebrina/1.webp",
+      "/images/Alocasia Zebrina/2.webp",
+      "/images/Alocasia Zebrina/3.webp"
+    ]
   },
   {
     "name": "Gerbera",
@@ -38,7 +48,12 @@
     "size": "small",
     "habit": "herbaceous",
     "filter": "new",
-    "image": "/images/Gerbera.webp"
+    "image": "/images/Gerbera/1.webp",
+    "allImages": [
+      "/images/Gerbera/1.webp",
+      "/images/Gerbera/2.webp",
+      "/images/Gerbera/3.webp"
+    ]
   },
   {
     "name": "Bird of Paradise (Strelitzia reginae)",
@@ -46,7 +61,12 @@
     "description": "Strelitzia reginae is a monocotyledonous flowering plant indigenous to South Africa. Common names include Strelitzia, Crane Flower or Bird of Paradise, though these names are also collectively applied to other species in the genus Strelitzia. Its scientific name commemorates Charlotte of Mecklenburg-Strelitz, queen consort of King George III. The plant grows to 2 m ft tall, with large, strong leaves 25 - 70 cm long and 10 - 30 cm broad, produced on petioles up to 1 m in long. The leaves are evergreen and arranged in two ranks, making a fan-shaped crown. The flowers stand above the foliage at the tips of long stalks. The hard, beak-like sheath from which the flower emerges is termed the spathe. This is placed perpendicular to the stem, which gives it the appearance of a bird's head and beak; it makes a durable perch for holding the sunbirds which pollinate the flowers. The flowers, which emerge one at a time from the spathe, consist of three brilliant orange sepals and three purplish-blue petals. Two of the blue petals are joined together to form an arrow-like nectary. When the sunbirds sit to drink the nectar, the petals open to cover their feet in pollen.",
     "size": "tall",
     "habit": "herbaceous",
-    "image": "/images/Bird of Paradise (Strelitzia reginae).webp"
+    "image": "/images/Bird of Paradise (Strelitzia reginae)/1.webp",
+    "allImages": [
+      "/images/Bird of Paradise (Strelitzia reginae)/1.webp",
+      "/images/Bird of Paradise (Strelitzia reginae)/2.webp",
+      "/images/Bird of Paradise (Strelitzia reginae)/3.webp"
+    ]
   },
   {
     "name": "Boston Fern",
@@ -54,7 +74,12 @@
     "description": "Boston Fern (Nephrolepis exaltata) is a species of fern in the family Lomariopsidaceae (sometimes treated in the families Davalliaceae or Oleandraceae, or in its own family, Nephrolepidaceae), native to tropical regions throughout the world. It is common in humid forests and swamps, especially in northern South America, Mexico, Central America, Florida, the West Indies, Polynesia and Africa. Also known as the Wild Boston fern, Tuber ladder fern or Fishbone fern is in the broader family of sword fern. The fronds are 50-250 cm long and 6-15 cm broad, with alternate pinnae (the small 'leaflets' on either side of the midrib), each pinna being 2-8 cm long. The pinnae are generally deltoid, as seen in the picture to the right. The pinnate vein pattern is also visible on these highly compound leaves. The edges appear slightly serrate. The species has erect fronds, but Nephrolepis exaltata cv. Bostoniensis (Boston Fern), the most commonly cultivated cultivar, has gracefully arching fronds. This mutation was discovered in a shipment of N. exaltata to Boston from Philadelphia in 1894.",
     "size": "tall",
     "habit": "fern",
-    "image": "/images/Boston Fern.webp"
+    "image": "/images/Boston Fern/1.webp",
+    "allImages": [
+      "/images/Boston Fern/1.webp",
+      "/images/Boston Fern/2.webp",
+      "/images/Boston Fern/3.webp"
+    ]
   },
   {
     "name": "Bamboo Palm",
@@ -64,7 +89,12 @@
     "habit": "bamboo",
     "filter": "sale",
     "oldprice": "125.00",
-    "image": "/images/Bamboo Palm.webp"
+    "image": "/images/Bamboo Palm/1.webp",
+    "allImages": [
+      "/images/Bamboo Palm/1.webp",
+      "/images/Bamboo Palm/2.webp",
+      "/images/Bamboo Palm/3.webp"
+    ]
   },
   {
     "name": "Calathea",
@@ -72,7 +102,12 @@
     "description": "Calathea is a genus of flowering plants belonging to the family Marantaceae. They are commonly called calatheas or (like their relatives) prayer plants. About 200 species formerly assigned to Calathea are now in the genus Goeppertia. Calathea currently contains around 60 species. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescences. The young leaves and bracts can retain pools of water, called phytotelmata, that provide habitat for many invertebrates.",
     "size": "medium",
     "habit": "herbaceous",
-    "image": "/images/Calathea.webp"
+    "image": "/images/Calathea/1.webp",
+    "allImages": [
+      "/images/Calathea/1.webp",
+      "/images/Calathea/2.webp",
+      "/images/Calathea/3.webp"
+    ]
   },
   {
     "name": "Chinese Hibiscus",
@@ -81,16 +116,26 @@
     "size": "medium",
     "habit": "shrub",
     "filter": "new",
-    "image": "/images/Chinese Hibiscus.webp"
+    "image": "/images/Chinese Hibiscus/1.webp",
+    "allImages": [
+      "/images/Chinese Hibiscus/1.webp",
+      "/images/Chinese Hibiscus/2.webp",
+      "/images/Chinese Hibiscus/3.webp"
+    ]
   },
   {
-    "name": "African violet",
+    "name": "African Violet",
     "price": "59.00",
     "description": "Saintpaulias are widely cultivated as house plants. Hairy often stemless perennial herbs, used for greenhouse flowering, the blossoms providing an attractive blue, violet, purple, white, pink and even green. Flowers can be single or double, solid or striped. 'Wasp' type flowers have the upper two flower petals independently fused forming a tube. There are also compound leaves on some, that are called 'bustled'. Over 2,000 cultivars have been selected, with a very wide variety of flower and leaf colors, shapes, sizes, patterns and textures. Cultivars are classified as Large, Standard, Trailing, Semi-mini, Mini, and Micro with Micro being the smallest. Leaves long-petioled, ovate: peduncles radical (or axillary in the caulescent species), 1-5 in. high, bearing several (or 1) fls. in a loose cyme: calyx small, deeply 5-lobed; corolla wide-campanulate, tube short, the lobes elliptic, blue; perfect stamens 2; ovary hairy: caps, oblong, locuhcidally 2-valved; seeds small, ellipsoid.",
     "size": "small",
     "habit": "herbaceous",
     "filter": "new",
-    "image": "/images/African Violet.webp"
+    "image": "/images/African Violet/1.webp",
+    "allImages": [
+      "/images/African Violet/1.webp",
+      "/images/African Violet/2.webp",
+      "/images/African Violet/3.webp"
+    ]
   },
   {
     "name": "Cordyline",
@@ -98,7 +143,12 @@
     "description": "Cordyline (club-like, referring to the fleshy roots). Liliaceae. Dracena. Dracena Palm. Greenhouse plants closely related to Dracaena; planted in the open in California and similar climates. Stems tall, often woody and palm-like, bearing large crowded Lvs., to the striking variegation of which the group owes its value: fls. panicled; stamens 6; pedicels articulated; perianth 6-parted; ovary 3-celled: fr. a berry.—Cult, for the ornamental foliage. The horticultural forms and names have become very numerous. The various species are in the trade under Dracaema, which see for a key to the species of both genera combined. From Dracaena, Cordyline differs in the ovary containing several ovules in each cell, and the solitary pedicels being provided with a 3bracted involucre. In the following paragraphs, the initial D. indicates that the plant in question is known in the trade as a Dracaena",
     "size": "medium",
     "habit": "shrub",
-    "image": "/images/Cordyline.webp"
+    "image": "/images/Cordyline/1.webp",
+    "allImages": [
+      "/images/Cordyline/1.webp",
+      "/images/Cordyline/2.webp",
+      "/images/Cordyline/3.webp"
+    ]
   },
   {
     "name": "Dracaena",
@@ -108,7 +158,12 @@
     "habit": "tree",
     "filter": "sale",
     "oldprice": "160.00",
-    "image": "/images/Dracaena.webp"
+    "image": "/images/Dracaena/1.webp",
+    "allImages": [
+      "/images/Dracaena/1.webp",
+      "/images/Dracaena/2.webp",
+      "/images/Dracaena/3.webp"
+    ]
   },
   {
     "name": "Ficus Alii",
@@ -116,7 +171,12 @@
     "description": "Ficus (pronounced /ˈfaɪkəs/) is a genus of about 850 species of woody trees, shrubs, vines, epiphytes, and hemiepiphyte in the family Moraceae. Collectively known as fig trees or figs, they are native throughout the tropics with a few species extending into the semi-warm temperate zone. The so-called Common Fig (F. carica) is a temperate species from the Middle East and eastern Europe (mostly Ukraine), which has been widely cultivated from ancient times for its fruit, also referred to as figs. The fruit of most other species are also edible though they are usually of only local economic importance or eaten as bushfood. However, they are extremely important food resources for wildlife. Figs are also of paramount cultural importance throughout the tropics, both as objects of worship and for their many practical uses. Ficus is a pan-tropical genus of trees, shrubs and vines occupying a wide variety of ecological niches; most are evergreen, but some deciduous species are endemic to areas outside of the tropics and to higher elevations. Fig species are characterized by their unique inflorescence and distinctive pollination syndrome, which utilizes wasp species belonging to the Agaonidae family for pollination. Some better known species that represent the diversity of the genus include the Common Fig which is a small temperate deciduous tree whose fingered fig leaf is well-known in art and iconography; the Weeping Fig (F. benjamina) a hemi-epiphyte with thin tough leaves on pendulous stalks adapted to its rain forest habitat; the rough-leaved sandpaper figs from Australia; the Creeping Fig (F. pumila), a vine whose small, hard leaves form a dense carpet of foliage over rocks or garden walls.",
     "size": "tall",
     "habit": "tree",
-    "image": "/images/Ficus Alii.webp"
+    "image": "/images/Ficus Alii/1.webp",
+    "allImages": [
+      "/images/Ficus Alii/1.webp",
+      "/images/Ficus Alii/2.webp",
+      "/images/Ficus Alii/3.webp"
+    ]
   },
   {
     "name": "Ficus Lyrata",
@@ -126,7 +186,12 @@
     "habit": "tree",
     "filter": "sale",
     "oldprice": "211.00",
-    "image": "/images/Ficus Lyrata.webp"
+    "image": "/images/Ficus Lyrata/1.webp",
+    "allImages": [
+      "/images/Ficus Lyrata/1.webp",
+      "/images/Ficus Lyrata/2.webp",
+      "/images/Ficus Lyrata/3.webp"
+    ]
   },
   {
     "name": "Geranium",
@@ -136,7 +201,12 @@
     "habit": "herbaceous",
     "filter": "sale",
     "oldprice": "55.00",
-    "image": "/images/Geranium.webp"
+    "image": "/images/Geranium/1.webp",
+    "allImages": [
+      "/images/Geranium/1.webp",
+      "/images/Geranium/2.webp",
+      "/images/Geranium/3.webp"
+    ]
   },
   {
     "name": "Guava",
@@ -146,7 +216,12 @@
     "habit": "shrub",
     "filter": "sale",
     "oldprice": "74.00",
-    "image": "/images/Guava.webp"
+    "image": "/images/Guava/1.webp",
+    "allImages": [
+      "/images/Guava/1.webp",
+      "/images/Guava/2.webp",
+      "/images/Guava/3.webp"
+    ]
   },
   {
     "name": "Begonia",
@@ -154,7 +229,12 @@
     "description": "Because of their sometimes showy flowers of white, pink, scarlet or yellow color and often attractively marked leaves, many species and innumerable hybrids and cultivars are cultivated. The genus is unusual in that species throughout the genus, even those coming from different continents, can frequently be hybridized with each other, and this has led to an enormous number of cultivars. The American Begonia Society classifies begonias into several major groups: cane-like, shrub-like, tuberous, rhizomatous, semperflorens, rex, trailing-scandent, or thick-stemmed. For the most part these groups do not correspond to any formal taxonomic groupings or phylogeny and many species and hybrids have characteristics of more than one group, or fit well into none of them.",
     "size": "small",
     "habit": "herbaceous",
-    "image": "/images/Begonia.webp"
+    "image": "/images/Begonia/1.webp",
+    "allImages": [
+      "/images/Begonia/1.webp",
+      "/images/Begonia/2.webp",
+      "/images/Begonia/3.webp"
+    ]
   },
   {
     "name": "Kumquat",
@@ -162,7 +242,12 @@
     "description": "Kumquats or cumquats are a group of small fruit-bearing trees in the flowering plant family Rutaceae, either forming the genus Fortunella, or placed within Citrus sensu lato. The edible fruit closely resembles that of the orange (Citrus sinensis), but it is much smaller and ovular, being approximately the size and shape of an olive. They are slow-growing evergreen shrubs or short trees, from 2.5 to 4.5 m tall, with sparse branches, sometimes bearing small thorns. The leaves are dark glossy green, and the flowers white, similar to other citrus flowers, borne singly or clustered in the leaf-axils. The kumquat tree produces 30 to 50 fruit each year.Template:Dubious The tree can be hydrophytic, with the fruit often found floating on water near shore during the ripe season. The plant is native to south Asia and the Asia-Pacific. The earliest historical reference to kumquats appears in literature of China in the 12th century. They have long been cultivated in Japan, Taiwan, the Philippines and southeast Asia. They were introduced to Europe in 1846 by Robert Fortune, collector for the London Horticultural Society, and shortly thereafter into North America.",
     "size": "small",
     "habit": "tree",
-    "image": "/images/Kumquat.webp"
+    "image": "/images/Kumquat/1.webp",
+    "allImages": [
+      "/images/Kumquat/1.webp",
+      "/images/Kumquat/2.webp",
+      "/images/Kumquat/3.webp"
+    ]
   },
   {
     "name": "Laurentii",
@@ -170,7 +255,12 @@
     "description": "Sansevieria trifasciata (Laurentii) is a species of Sansevieria, native to tropical west Africa. It is commonly called the snake plant, because of the shape of its leaves, or mother-in-law's tongue because of their sharpness. It is an evergreen herbaceous perennial plant forming dense stands, spreading by way of its creeping rhizome, which is sometimes above ground, sometimes underground. Its stiff leaves grow vertically from a basal rosette. Mature leaves are dark green with light gray-green cross-banding and usually range between 70–90 cm in length and 5–6 cm in width.",
     "size": "medium",
     "habit": "herbaceous",
-    "image": "/images/Laurentii.webp"
+    "image": "/images/Laurentii/1.webp",
+    "allImages": [
+      "/images/Laurentii/1.webp",
+      "/images/Laurentii/2.webp",
+      "/images/Laurentii/3.webp"
+    ]
   },
   {
     "name": "Cactus",
@@ -178,7 +268,12 @@
     "description": "Cactus or cacti. The plants correctly designated by this name constitute the family Cactaceae. Scarcely any group in the whole plant kingdom is more remarkable for its strange and varied forms, the beauty of its flowers, and wonderful adaptation to desert life. It is not, however, confined to desert regions; for in the moist forests of the tropics of the New World it is represented by a number of interesting forms often epiphytal or scrambling in their habit of growth, with beautiful flowers and sometimes with delicious edible fruit.",
     "size": "medium",
     "habit": "succulent",
-    "image": "/images/Cactus.webp"
+    "image": "/images/Cactus/1.webp",
+    "allImages": [
+      "/images/Cactus/1.webp",
+      "/images/Cactus/2.webp",
+      "/images/Cactus/3.webp"
+    ]
   },
   {
     "name": "Orchid",
@@ -187,7 +282,12 @@
     "size": "small",
     "habit": "orchid",
     "filter": "new",
-    "image": "/images/Orchid.webp"
+    "image": "/images/Orchid/1.webp",
+    "allImages": [
+      "/images/Orchid/1.webp",
+      "/images/Orchid/2.webp",
+      "/images/Orchid/3.webp"
+    ]
   },
   {
     "name": "Banana Tree",
@@ -195,7 +295,12 @@
     "description": "Adaptation Bananas and plantains are today grown in every humid tropical region and constitutes the 4th largest fruit crop of the world. The plant needs 10 - 15 months of frost-free conditions to produce a flower stalk. All but the hardiest varieties stop growing when the temperature drops below 12° C (53° F). Growth of the plant begins to slow down at about 27° C (80° F) and stop entirely when the temperature reaches 38° C (100° F). High temperatures and bright sunlight will also scorch leaves and fruit, although bananas grow best in full sun. Freezing temperatures will kill the foliage. In most areas bananas require wind protection for best appearance and maximum yield. They are also susceptible to being blown over. Bananas, especially dwarf varieties, make good container specimens if given careful attention. The plant will also need periodic repotting as the old plant dies back and new plants develop. Growth Habit: Bananas are fast-growing herbaceous perennials arising from underground rhizomes. The fleshy stalks or pseudostems formed by upright concentric layers of leaf sheaths constitute the functional trunks. The true stem begins as an underground corm which grows upwards, pushing its way out through the center of the stalk 10-15 months after planting, eventually producing the terminal inflorescence which will later bear the fruit. Each stalk produces one huge flower cluster and then dies. New stalks then grow from the rhizome. Banana plants are extremely decorative, ranking next to palm trees for the tropical feeling they lend to the landscape.",
     "size": "tall",
     "habit": "tree",
-    "image": "/images/Banana Tree.webp"
+    "image": "/images/Banana Tree/1.webp",
+    "allImages": [
+      "/images/Banana Tree/1.webp",
+      "/images/Banana Tree/2.webp",
+      "/images/Banana Tree/3.webp"
+    ]
   },
   {
     "name": "Hibiscus",
@@ -204,7 +309,12 @@
     "size": "small",
     "habit": "shrub",
     "filter": "new",
-    "image": "/images/Hibiscus.webp"
+    "image": "/images/Hibiscus/1.webp",
+    "allImages": [
+      "/images/Hibiscus/1.webp",
+      "/images/Hibiscus/2.webp",
+      "/images/Hibiscus/3.webp"
+    ]
   },
   {
     "name": "Schefflera",
@@ -213,7 +323,12 @@
     "size": "small",
     "habit": "shrub",
     "filter": "new",
-    "image": "/images/Schefflera.webp"
+    "image": "/images/Schefflera/1.webp",
+    "allImages": [
+      "/images/Schefflera/1.webp",
+      "/images/Schefflera/2.webp",
+      "/images/Schefflera/3.webp"
+    ]
   },
   {
     "name": "Aglaonema",
@@ -221,7 +336,12 @@
     "description": "Aglaonema is a genus of about 20 species of flowering plants in the family Araceae, native to the tropical swamps and rainforests of southeastern Asia from Bangladesh east to the Philippines and north to southern China. No common name is widely used, though they are sometimes called 'Chinese evergreen'. They are herbaceous perennial plants growing to 20-150 cm in height. The leaves are alternate on the stems, lanceolate to narrowly ovate, dark to medium green, 10-45 cm long and 4-16 cm broad, depending on the species. The flowers are relatively inconspicuous, white or greenish-white spathes that can give way to red berries.",
     "size": "small",
     "habit": "herbaceous",
-    "image": "/images/Aglaonema.webp"
+    "image": "/images/Aglaonema/1.webp",
+    "allImages": [
+      "/images/Aglaonema/1.webp",
+      "/images/Aglaonema/2.webp",
+      "/images/Aglaonema/3.webp"
+    ]
   },
   {
     "name": "String of Pearls",
@@ -229,7 +349,12 @@
     "description": "Senecio rowleyanus, commonly called string-of-pearls or string-of-beads, is a flowering plant in the family Asteraceae. It is native to southwest Africa. S. rowleyanus grows long, trailing stems of spherical leaves. The flowers are pale and brushlike. It is cultivated indoors as an ornamental plant for hanging baskets. The fleshy leaves are poisonous and should not be consumed.",
     "size": "small",
     "habit": "cacti-succulent",
-    "image": "/images/String of Pearls.webp"
+    "image": "/images/String of Pearls/1.webp",
+    "allImages": [
+      "/images/String of Pearls/1.webp",
+      "/images/String of Pearls/2.webp",
+      "/images/String of Pearls/3.webp"
+    ]
   },
   {
     "name": "Jasmine",
@@ -237,7 +362,12 @@
     "description": "Jasminium (Arabic name, from which have come Jessamine, Jasmin and Jasminum). Oleaceae. Jasmine. Jessamine. Climbing or erect shrubs, with attractive flowers, mostly very fragrant, prized for planting in mild climates and frequently grown under glass. Leaves opposite or alternate, pinnate but sometimes reduced to 1 lft.(petiole jointed): fls. on the ends of the branchlets, or twin, or in dichotomous cymes; corolla yellow or white, sometimes reddish, salver-shaped, the 4-9 or more lobes convolute in the bud, much exceeding the calyx; stamens 2, included in the corolla-tube; ovary 2-loculed, with 1-4 erect ovules: fr. a 2-lobed berry, or sometimes the carpels separate, the carpels mostly 2-seeded.—Probably upwards of 200 species, widely distributed in warm parts of Eu., Asia, Afr., and the Pacific region; nearly absent from Amer. The genus is closely allied to Ligustrum, but differs in the compound lvs. and twin-carpeled frs. Olea is also a related genus.",
     "size": "small",
     "habit": "vine-climber",
-    "image": "/images/Jasmine.webp"
+    "image": "/images/Jasmine/1.webp",
+    "allImages": [
+      "/images/Jasmine/1.webp",
+      "/images/Jasmine/2.webp",
+      "/images/Jasmine/3.webp"
+    ]
   },
   {
     "name": "Bamboo",
@@ -245,7 +375,12 @@
     "description": "Bamboo are a group of perennial evergreen (except for certain temperate species) plants in the true grass family Poaceae, subfamily Bambusoideae, tribe Bambuseae. Giant bamboos are the largest members of the grass family. Bamboos are also the fastest growing plants in the world. They are capable of growing up to 60 centimeters (24 in.) or more per day due to a unique rhizome-dependent system. However, this astounding growth rate is highly dependent on local soil and climatic conditions. There are more than 70 genera divided into about 1,000 species. They are found in diverse climates, from cold mountains to hot tropical regions. They occur across East Asia, from 50°N latitude in Sakhalin[citation needed] through to Northern Australia, and west to India and the Himalayas. They also occur in sub-Saharan Africa, and in the Americas from the Mid-Atlantic United States south to Argentina and Chile, reaching their southernmost point anywhere, at 47°S latitude. Continental Europe is not known to have any native species of bamboo.",
     "size": "tall",
     "habit": "bamboo",
-    "image": "/images/Bamboo.webp"
+    "image": "/images/Bamboo/1.webp",
+    "allImages": [
+      "/images/Bamboo/1.webp",
+      "/images/Bamboo/2.webp",
+      "/images/Bamboo/3.webp"
+    ]
   },
   {
     "name": "Narcissus",
@@ -255,7 +390,12 @@
     "description": "Narcissus is the botanic name for a genus of hardy, mostly spring-flowering, bulbs. There are several Narcissus species that bloom in the autumn. Daffodil is a common English name, sometimes used now for all narcissus. They are mostly native to the Mediterranean region, but a few species are found through Central Asia to China. The range of forms in cultivation has been heavily modified and extended, with new variations available in nurseries practically every year. All Narcissus species have a central trumpet-shaped corona surrounded by a ring of petals. The traditional daffodil has a golden yellow color all over, but the corona may often feature a contrasting color such as that of a slice of lime. Breeders have developed some daffodils with a double or triple row of petals, making them resemble a small golden ball. Other cultivars have frilled petals, or an elongated or compressed central corona. Daffodils are poisonous, and if eaten could result in death",
     "size": "small",
     "habit": "bulbous",
-    "image": "/images/Narcissus.webp"
+    "image": "/images/Narcissus/1.webp",
+    "allImages": [
+      "/images/Narcissus/1.webp",
+      "/images/Narcissus/2.webp",
+      "/images/Narcissus/3.webp"
+    ]
   },
   {
     "name": "Gladiolus",
@@ -265,7 +405,12 @@
     "habit": "bulbous",
     "filter": "sale",
     "oldprice": "96.00",
-    "image": "/images/Gladiolus.webp"
+    "image": "/images/Gladiolus/1.webp",
+    "allImages": [
+      "/images/Gladiolus/1.webp",
+      "/images/Gladiolus/2.webp",
+      "/images/Gladiolus/3.webp"
+    ]
   },
   {
     "name": "Yucca Cactus",
@@ -275,6 +420,11 @@
     "habit": "tree",
     "filter": "sale",
     "oldprice": "147.00",
-    "image": "/images/Yucca Cactus.webp"
+    "image": "/images/Yucca Cactus/1.webp",
+    "allImages": [
+      "/images/Yucca Cactus/1.webp",
+      "/images/Yucca Cactus/2.webp",
+      "/images/Yucca Cactus/3.webp"
+    ]
   }
 ]
