@@ -9,7 +9,7 @@ function PlantItem({ plant }) {
 
   return (
     <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
-      <S.PlantItem>
+      <S.PlantItem className='plant-item'>
         <S.PlantImageContainer>
           <S.PlantImage>
             <Image src={plant.image} layout='fill' />

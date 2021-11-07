@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { updatePlants, updateTabsFilter } from 'redux/filtersSlice';
+import { goToSpecificPage } from 'redux/pageSlice';
 import styled from 'styled-components';
 
 function Tabs({ executeScroll }) {
@@ -14,6 +15,7 @@ function Tabs({ executeScroll }) {
   };
 
   const updateTabsHandler = (value) => {
+    dispatch(goToSpecificPage(1));
     dispatch(updateTabsFilter(value));
     dispatch(updatePlants());
     executeScroll();

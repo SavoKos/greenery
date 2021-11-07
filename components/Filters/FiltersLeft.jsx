@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateHabit, updatePlants, updateSize } from 'redux/filtersSlice';
 import Icon from '@components/UI/Icon';
+import { goToSpecificPage } from 'redux/pageSlice';
 
 function FiltersLeft({ setFilterActive, executeScroll }) {
   const { size, habit, initialPlants } = useSelector((state) => state.filters);
@@ -10,17 +11,22 @@ function FiltersLeft({ setFilterActive, executeScroll }) {
 
   const allHabits = initialPlants?.map((plant) => plant?.habit);
   const habitList = [...new Set(initialPlants?.map((plant) => plant?.habit))];
+
+  const updatePage = () => {
+    dispatch(goToSpecificPage(1));
+    executeScroll();
+    dispatch(updatePlants());
+  };
+
   const habitHandler = (value) => {
     if (!habit.includes(value)) {
       dispatch(updateHabit([...habit, value]));
-      executeScroll();
-      return dispatch(updatePlants());
+      return updatePage();
     }
 
     const updatedHabit = [...habit].filter((habit) => habit !== value);
     dispatch(updateHabit(updatedHabit));
-    dispatch(updatePlants());
-    executeScroll();
+    updatePage();
   };
 
   const allSizes = initialPlants?.map((plant) => plant?.size);
@@ -28,14 +34,12 @@ function FiltersLeft({ setFilterActive, executeScroll }) {
   const sizeHandler = (value) => {
     if (!size.includes(value)) {
       dispatch(updateSize([...size, value]));
-      executeScroll();
-      return dispatch(updatePlants());
+      return updatePage();
     }
 
     const updatedSize = [...size].filter((size) => size !== value);
     dispatch(updateSize(updatedSize));
-    dispatch(updatePlants());
-    executeScroll();
+    updatePage();
   };
 
   const capitalize = (word) => word[0].toUpperCase() + word.slice(1);

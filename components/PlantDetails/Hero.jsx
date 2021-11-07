@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 function Hero({ plant }) {
   const [itemCount, setItemCount] = useState(1);
+  const [size, setSize] = useState('S');
   const [image, setImage] = useState(plant.image);
 
   return (
@@ -37,10 +38,18 @@ function Hero({ plant }) {
         </p>
         <h4>Size:</h4>
         <S.SizesList>
-          <S.Size>S</S.Size>
-          <S.Size>M</S.Size>
-          <S.Size>L</S.Size>
-          <S.Size>XL</S.Size>
+          <S.Size onClick={() => setSize('S')} selectedSize={size} value='S'>
+            S
+          </S.Size>
+          <S.Size onClick={() => setSize('M')} selectedSize={size} value='M'>
+            M
+          </S.Size>
+          <S.Size onClick={() => setSize('L')} selectedSize={size} value='L'>
+            L
+          </S.Size>
+          <S.Size onClick={() => setSize('XL')} selectedSize={size} value='XL'>
+            XL
+          </S.Size>
         </S.SizesList>
         <S.Buy>
           <Icon
@@ -156,11 +165,18 @@ S.Size = styled.h4`
   margin: 0 0.8rem 0 0 !important;
   transition: all ease 0.3s;
   cursor: pointer;
+  border: ${({ selectedSize, value, theme }) =>
+    selectedSize === value
+      ? `2px solid ${theme.colors.green}`
+      : `2px solid ${theme.colors.border}`};
 
-  &:nth-of-type(1) {
+  color: ${({ selectedSize, value, theme }) =>
+    selectedSize === value && theme.colors.green};
+
+  /* &:nth-of-type(1) {
     border: 2px solid ${({ theme }) => theme.colors.green};
     color: ${({ theme }) => theme.colors.green};
-  }
+  } */
 
   &:hover {
     border: 2px solid ${({ theme }) => theme.colors.green};
@@ -175,7 +191,9 @@ S.Buy = styled.div`
 
   h3 {
     font-weight: 500;
-    margin: 0 1rem;
+    width: 40px;
+    margin: 0 10px;
+    text-align: center;
   }
 
   .anticon {

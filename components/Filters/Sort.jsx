@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { updatePlants, updateSort } from 'redux/filtersSlice';
+import { goToSpecificPage } from 'redux/pageSlice';
 import styled from 'styled-components';
 
 function Sort({ setFilterActive }) {
@@ -19,6 +20,7 @@ function Sort({ setFilterActive }) {
   };
 
   const updateValueHandler = (value) => {
+    dispatch(goToSpecificPage(1));
     dispatch(updateSort(value));
     dispatch(updatePlants());
     setSortActive(false);

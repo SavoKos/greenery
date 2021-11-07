@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import Hero from '@components/PlantDetails/Hero';
 import Spinner from '@components/UI/Spinner';
 import FullDescription from '@components/PlantDetails/FullDescription';
+import RelatedProducts from '@components/PlantDetails/RelatedProducts';
+import Footer from '@components/Footer';
 
 export const getServerSideProps = async ({ query: { slug } }) => {
   return {
@@ -51,7 +53,9 @@ function PlantDetails({ slug }) {
       <S.Container>
         <Hero plant={plant} />
         <FullDescription plant={plant} />
+        <RelatedProducts plant={plant} />
       </S.Container>
+      <Footer />
     </>
   );
 }

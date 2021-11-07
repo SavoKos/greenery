@@ -16,10 +16,11 @@
   {
     "name": "Basil",
     "price": "128.00",
+    "oldprice": "189.00",
     "description": "Basil (Ocimum basilicum) is a tender low-growing herb that is grown as a perennial in warm, tropical climates, and an annual elsewhere. Basil is originally native to Iran, India and other tropical regions of Asia, having been cultivated there for more than 5,000 years. There are many varieties of basil, that which is used in Italian food is typically called sweet basil, as opposed to Thai basil or holy basil, which are used in Asia. It grows to between 30–130 cm tall, with opposite, light green, silky leaves 3–11 cm long and 1–6 cm broad. The flowers are quite big, white in color and arranged in a terminal spike. Unusual among Lamiaceae, the four stamens and the pistil are not pushed under the upper lip of the corolla, but lay over the inferior. After entomophilous pollination, the corolla falls off and four round achenes develop inside the bilabiate calyx. The plant tastes somewhat like anise, with a strong, pungent, sweet smell. Basil is very sensitive to cold, with best growth in hot, dry conditions. While most common varieties are treated as annuals, some are perennial, including African Blue and Holy Thai basil. The word basil comes from the Greek βασιλεύς (basileus), meaning 'king'.",
     "size": "medium",
     "habit": "herbaceous",
-    "filter": "new",
+    "filter": "sale",
     "image": "/images/Basil/1.webp",
     "allImages": [
       "/images/Basil/1.webp",
@@ -39,6 +40,19 @@
       "/images/Alocasia Zebrina/1.webp",
       "/images/Alocasia Zebrina/2.webp",
       "/images/Alocasia Zebrina/3.webp"
+    ]
+  },
+  {
+    "name": "Kalanchoe",
+    "price": "134.00",
+    "description": "Kalanchoe daigremontiana syn. Bryophyllum daigremontianum also called Devil's Backbone, Alligator Plant, Mexican Hat Plant or Mother of Thousands is a succulent plant native to Madagascar. This plant is distinguished by its ability to propagate via vegetative propagation. All parts of the plant are poisonous, which can even be fatal if ingested by infants or small pets. Plants reach up to 1 m (3 feet) tall with opposite, fleshy oblong-lanceolate 'leaves' that reach 15-20 cm (6-8 inches) long and about 3.2 cm (1.25 inches) wide. These are medium green above and blotched with purple underneath. The margins of these leaf-like organs have spoon-shaped bulbiliferous spurs that bear young plants. The plantlets form roots while on the plant. The 'leaves' are actually short, determinate, leaf-like branches that can be termed phylloclades or cladodes. Adult plants can also develop lateral root structures on its main stalk, as high up as 10-15 cm from the ground. The plant has several nodes with two or three leaves on each node. The upper leaves of the plant tend to develop into disproportionately large structures, causing the main stalk to bend downwards and the lateral roots to take up root of their own, anchoring into the soil and eventually developing new primary stalks which establish themselves as independent plants. Furthermore, Kalanchoe daigremontiana can go through a flowering season, where the main stalk elongates vertically upwards by as much as 30 cm, within a couple of days, developing an umbrella-like terminal inflorescence (a compound cyme) of small bell-shaped pink flowers. Flowering is, however, not an annual event and will occur sporadically if at all.",
+    "size": "medium",
+    "habit": "cacti-succulent",
+    "image": "/images/Kalanchoe/1.webp",
+    "allImages": [
+      "/images/Kalanchoe/1.webp",
+      "/images/Kalanchoe/2.webp",
+      "/images/Kalanchoe/3.webp"
     ]
   },
   {
@@ -135,6 +149,21 @@
       "/images/African Violet/1.webp",
       "/images/African Violet/2.webp",
       "/images/African Violet/3.webp"
+    ]
+  },
+  {
+    "name": "Jade Plant",
+    "price": "79.00",
+    "oldprice": "99.00",
+    "description": "Crassula ovate (syn. Crassula argentea, Crassula obliqua, Crassula portulacea) is more commonly known as jade plant or friendship tree. It is a succulent plant that sometimes has small pink or white flowers. The term Jade Plant is also sometimes used to refer to the 'money tree,' however Pachira aquatica is the original 'money tree.' Jade plants are evergreen succulents native to South Africa where the environmental conditions are dry with little rainfall. The plant itself can be identified with thick branches and smooth, rounded and fleshy leaves that grow in opposing pairs along the branches. The species has a jade green color to the leaves, and some species can also develop a red tinge on the edges of leaves when exposed to high levels of sunlight. The growth pattern and structure of the succulent is evenly distributed. Dependent on the environment in which it is in, the plant produces small white or pink star like flowers that adorn the ends of new stalks in the Spring.",
+    "size": "medium",
+    "habit": "cacti-succulent",
+    "filter": "sale",
+    "image": "/images/Jade Plant/1.webp",
+    "allImages": [
+      "/images/Jade Plant/1.webp",
+      "/images/Jade Plant/2.webp",
+      "/images/Jade Plant/3.webp"
     ]
   },
   {
@@ -341,6 +370,21 @@
       "/images/Aglaonema/1.webp",
       "/images/Aglaonema/2.webp",
       "/images/Aglaonema/3.webp"
+    ]
+  },
+  {
+    "name": "Agave",
+    "price": "57.00",
+    "oldprice": "73.00",
+    "description": "Chiefly Mexican, agaves occur also in the southern and western United States and in central and tropical South America. They are succulents with a large rosette of thick fleshy leaves, each ending generally in a sharp point and with a spiny margin; the stout stem is usually short, the leaves apparently springing from the root. Along with plants from the related genus Yucca, various Agave species are popular ornamental plants. Each rosette is monocarpic and grows slowly to flower only once. During flowering, a tall stem or 'mast' grows from the center of the leaf rosette and bears a large number of shortly tubular flowers. After development of fruit, the original plant dies, but suckers are frequently produced from the base of the stem, which become new plants. It is a common misconception that agaves are cacti. They are not related to cacti, nor are they closely related to Aloe whose leaves are similar in appearance.",
+    "size": "large",
+    "habit": "cacti-succulent",
+    "filter": "sale",
+    "image": "/images/Agave/1.webp",
+    "allImages": [
+      "/images/Agave/1.webp",
+      "/images/Agave/2.webp",
+      "/images/Agave/3.webp"
     ]
   },
   {
