@@ -1,11 +1,16 @@
 import Modal from '@components/UI/Modal';
-import useAuth from 'context/AuthContext';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoginActive, setRegisterActive } from 'redux/authSlice';
 import styled from 'styled-components';
-import { database } from '../../firebase';
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from 'firebase/auth';
+import { setDoc, doc } from 'firebase/firestore/lite';
+import Spinner from '@components/UI/Spinner';
+import { firestore, auth } from '../../firebase';
 
 function Login() {
   const { loginActive, registerActive } = useSelector((state) => state.auth);
@@ -14,49 +19,53 @@ function Login() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-
-  const { signup, currentUser } = useAuth();
-  console.log(currentUser);
-
-  console.log(username);
+  const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
 
   const closeModal = () => {
     dispatch(setLoginActive(false));
     dispatch(setRegisterActive(false));
+    setError('');
   };
 
   const loginUser = () => {
-    login(credentials.email, credentials.password).catch((error) => {
-      setError(error.message);
-    });
+    setLoading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        closeModal();
+        setLoading(false);
+      })
+      .catch((error) => {
+        closeModal();
+        setError(error.message);
+        setLoading(false);
+      });
   };
 
   const signupUser = () => {
-    signup(email, password)
+    setLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
       .then((user) => {
         updateProfileHandler(user.user);
         closeModal();
+        setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        setLoading(false);
         setError(error.message);
       });
   };
 
   const updateProfileHandler = (userData) => {
-    const updateUser = userData.updateProfile({
+    updateProfile(auth.currentUser, {
       displayName: username,
-    });
-    const storeUserDatabase = database.ref('users/' + userData.uid).set({
+    }).catch((error) => setError(error.message));
+
+    setDoc(doc(firestore, 'users', userData.uid), {
       name: username,
       email: email,
-    });
-
-    Promise.all([updateUser, storeUserDatabase]).catch((error) => {
-      setError(error.message);
-    });
+    }).catch((error) => setError(error.message));
   };
 
   const signupHandler = (e) => {
@@ -64,6 +73,8 @@ function Login() {
       return setError('Passwords do not match!');
     return signupUser();
   };
+
+  if (loading || !auth) return <Spinner />;
 
   return (
     <Modal active={loginActive || registerActive} closeModal={closeModal}>

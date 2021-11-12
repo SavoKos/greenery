@@ -5,8 +5,44 @@ import Router from 'next/router';
 import { setLoginActive } from 'redux/authSlice';
 import { useDispatch } from 'react-redux';
 
+import { auth } from '../firebase';
+import { signOut, onAuthStateChanged } from 'firebase/auth';
+import { useState } from 'react';
+import Spinner from './UI/Spinner';
+
 export default function Navigation() {
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState();
+
   const dispatch = useDispatch();
+
+  onAuthStateChanged(auth, (user) => setUser(user));
+
+  const logout = () => {
+    setLoading(true);
+    signOut(auth)
+      .then(() => setLoading(false))
+      .catch(() => setLoading(false));
+  };
+
+  const authIcon = () => {
+    if (user)
+      return (
+        <S.Auth onClick={logout} className='logout'>
+          <Icon type='icon-logout' />
+          <p>Logout</p>
+        </S.Auth>
+      );
+
+    return (
+      <S.Auth onClick={() => dispatch(setLoginActive(true))}>
+        <Icon type='icon-login' />
+        <p>Login</p>
+      </S.Auth>
+    );
+  };
+
+  if (loading) return <Spinner />;
 
   return (
     <S.Container>
@@ -26,10 +62,7 @@ export default function Navigation() {
           <Icon type='icon-tubiaozhizuomoban-' />
           <Icon type='icon-cart1' />
           <Icon type='icon-login' className='login-icon-only' />
-          <S.Login onClick={() => dispatch(setLoginActive(true))}>
-            <Icon type='icon-login' />
-            <p>Login</p>
-          </S.Login>
+          {authIcon()}
         </S.Icons>
       </S.Navigation>
     </S.Container>
@@ -78,7 +111,7 @@ S.Icons = styled.div`
   }
 `;
 
-S.Login = styled.div`
+S.Auth = styled.div`
   padding: 0.5rem 1rem;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.green};
@@ -87,6 +120,11 @@ S.Login = styled.div`
   cursor: pointer;
   margin-left: 1rem;
   display: none;
+
+  &.logout {
+    background-color: #e15b5b;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
   }

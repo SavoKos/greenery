@@ -51,6 +51,7 @@ S.Modal = styled.div`
   align-items: center;
   justify-content: center;
   border-bottom: 10px solid ${({ theme }) => theme.colors.green};
+  min-width: 600px;
 
   .loading {
     position: absolute;
