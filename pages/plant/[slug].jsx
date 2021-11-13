@@ -49,13 +49,13 @@ function PlantDetails({ slug }) {
           rel='canonical'
         />
       </Head>
-      <Navigation />
       <S.Container>
+        <Navigation />
         <Hero plant={plant} />
         <FullDescription plant={plant} />
         <RelatedProducts plant={plant} />
+        <Footer />
       </S.Container>
-      <Footer />
     </>
   );
 }

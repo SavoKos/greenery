@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateInitialPlants, updatePlants } from 'redux/filtersSlice';
 import axios from 'axios';
 import Spinner from '@components/UI/Spinner';
+import styled from 'styled-components';
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -37,10 +38,18 @@ export default function Home() {
         />
         <link href='https://greenery.savokos.com' rel='canonical' />
       </Head>
-      <Navigation />
-      <Hero scrollRef={scrollRef} />
-      <Plants scrollRef={scrollRef} />
-      <Footer />
+      <S.Container>
+        <Navigation />
+        <Hero scrollRef={scrollRef} />
+        <Plants scrollRef={scrollRef} />
+        <Footer />
+      </S.Container>
     </>
   );
 }
+
+// -------------------------------------------------- styling ----------------------------------------------
+const S = {};
+S.Container = styled.div`
+  padding: 0 5%;
+`;

@@ -25,34 +25,31 @@ function Plants({ scrollRef }) {
   };
 
   return (
-    <>
-      <S.Container>
-        <S.FiltersSidebar filterActive={filterActive}>
-          <FiltersLeft
-            setFilterActive={setFilterActive}
-            executeScroll={executeScroll}
-          />
-        </S.FiltersSidebar>
-        <S.LeftSide>
-          <FiltersLeft executeScroll={executeScroll} />
-        </S.LeftSide>
-        <S.RightSide ref={scrollRef}>
-          <S.FiltersTop>
-            <Tabs executeScroll={executeScroll} />
-            <Sort setFilterActive={setFilterActive} />
-          </S.FiltersTop>
-          <S.PlantsList>{renderPlants()}</S.PlantsList>
-          <Pagination pagesCount={pagesCount} executeScroll={executeScroll} />
-        </S.RightSide>
-      </S.Container>
-    </>
+    <S.Plants>
+      <S.FiltersSidebar filterActive={filterActive}>
+        <FiltersLeft
+          setFilterActive={setFilterActive}
+          executeScroll={executeScroll}
+        />
+      </S.FiltersSidebar>
+      <S.LeftSide>
+        <FiltersLeft executeScroll={executeScroll} />
+      </S.LeftSide>
+      <S.RightSide ref={scrollRef}>
+        <S.FiltersTop>
+          <Tabs executeScroll={executeScroll} />
+          <Sort setFilterActive={setFilterActive} />
+        </S.FiltersTop>
+        <S.PlantsList>{renderPlants()}</S.PlantsList>
+        <Pagination pagesCount={pagesCount} executeScroll={executeScroll} />
+      </S.RightSide>
+    </S.Plants>
   );
 }
 
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};
-S.Container = styled.div`
-  padding: 0 5%;
+S.Plants = styled.div`
   margin-top: 10rem;
   display: flex;
 

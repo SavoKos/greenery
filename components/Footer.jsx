@@ -4,7 +4,7 @@ import Icon from './UI/Icon';
 
 function Footer() {
   return (
-    <S.Container>
+    <S.FooterContainer>
       <S.Footer>
         <S.Logo>
           <Image
@@ -33,16 +33,14 @@ function Footer() {
         </a>
         . All Rights Reserved.
       </h4>
-    </S.Container>
+    </S.FooterContainer>
   );
 }
 
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};
 
-S.Container = styled.div`
-  padding: 0 5%;
-
+S.FooterContainer = styled.div`
   .copyright {
     text-align: center;
     font-weight: 500;

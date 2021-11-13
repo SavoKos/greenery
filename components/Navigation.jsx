@@ -9,10 +9,13 @@ import { auth } from '../firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { useState } from 'react';
 import Spinner from './UI/Spinner';
+import { useSelector } from 'react-redux';
 
 export default function Navigation() {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState();
+  const { cartItems } = useSelector((state) => state.cart);
+  const itemsCount = cartItems.length;
 
   const dispatch = useDispatch();
 
@@ -23,6 +26,10 @@ export default function Navigation() {
     signOut(auth)
       .then(() => setLoading(false))
       .catch(() => setLoading(false));
+  };
+
+  const wishlistHandler = () => {
+    if (!auth.currentUser) return dispatch(setLoginActive(true));
   };
 
   const authIcon = () => {
@@ -59,8 +66,14 @@ export default function Navigation() {
         </S.Logo>
 
         <S.Icons>
-          <Icon type='icon-tubiaozhizuomoban-' />
-          <Icon type='icon-cart1' />
+          <Icon type='icon-tubiaozhizuomoban-' onClick={wishlistHandler} />
+          <Icon
+            type='icon-cart1'
+            className='cart'
+            dataItems={itemsCount}
+            itemsCount={0}
+            onClick={() => Router.push('/cart')}
+          />
           <Icon type='icon-login' className='login-icon-only' />
           {authIcon()}
         </S.Icons>
@@ -72,7 +85,10 @@ export default function Navigation() {
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};
 S.Container = styled.div`
-  padding: 0 5%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 `;
 
 S.Navigation = styled.div`
@@ -99,13 +115,33 @@ S.Icons = styled.div`
 
   .anticon {
     font-size: 1.5rem;
-    /* margin: 0 1rem; */
     margin: 0 0.5rem;
     cursor: pointer;
 
     &.login-icon-only {
       @media screen and (min-width: 768px) {
         display: none;
+      }
+    }
+
+    &.cart {
+      position: relative;
+
+      &::before {
+        content: attr(data-items);
+        font-size: 12px;
+        position: absolute;
+        right: -0.45rem;
+        top: -0.45rem;
+        color: #fff;
+        background-color: ${({ theme }) => theme.colors.green};
+        border-radius: 50%;
+        min-width: 13px;
+        min-height: 13px;
+        padding: 0.15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

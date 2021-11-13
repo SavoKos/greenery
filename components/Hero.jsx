@@ -4,39 +4,34 @@ import Icon from './UI/Icon';
 
 export default function Hero({ scrollRef }) {
   return (
-    <S.Container>
-      <S.Hero>
-        <S.TextContent>
-          <h4>WELCOME TO GREENSHOP</h4>
-          <h1>
-            LET&apos;S MAKE A BETTER <span>PLANET</span>
-          </h1>
-          <p className='description'>
-            We are an online plant shop offering a wide range of cheap and
-            trendy plants. Use our plants to create an unique Urban Jungle.
-            Order your favorite plants!
-          </p>
-          <S.ShopNow
-            onClick={() =>
-              scrollRef.current.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            <Icon type='icon-shopping' />
-            <p>Shop Now</p>
-          </S.ShopNow>
-        </S.TextContent>
+    <S.Hero>
+      <S.TextContent>
+        <h4>WELCOME TO GREENSHOP</h4>
+        <h1>
+          LET&apos;S MAKE A BETTER <span>PLANET</span>
+        </h1>
+        <p className='description'>
+          We are an online plant shop offering a wide range of cheap and trendy
+          plants. Use our plants to create an unique Urban Jungle. Order your
+          favorite plants!
+        </p>
+        <S.ShopNow
+          onClick={() =>
+            scrollRef.current.scrollIntoView({ behavior: 'smooth' })
+          }
+        >
+          <Icon type='icon-shopping' />
+          <p>Shop Now</p>
+        </S.ShopNow>
+      </S.TextContent>
 
-        <Image src='/plant.webp' height='350' width='300' alt='plant' />
-      </S.Hero>
-    </S.Container>
+      <Image src='/plant.webp' height='350' width='300' alt='plant' />
+    </S.Hero>
   );
 }
 
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};
-S.Container = styled.div`
-  padding: 0 5%;
-`;
 
 S.Hero = styled.div`
   background-color: #f5f5f5;

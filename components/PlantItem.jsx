@@ -2,10 +2,37 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Icon from './UI/Icon';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, updateCartItem } from 'redux/cartSlice';
 
 function PlantItem({ plant }) {
+  const { cartItems } = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
+
   const calculateDiscount = () =>
     Math.round((100 * (plant.oldprice - plant.price)) / plant.oldprice);
+
+  const addToCartHandler = (e) => {
+    e.preventDefault();
+
+    if (cartItems.find((item) => item.name === plant.name)) {
+      const plantCopy = JSON.parse(JSON.stringify(cartItems))[0];
+      plantCopy.quantity += 1;
+
+      return dispatch(updateCartItem(plantCopy));
+    }
+
+    const plantInfo = {
+      name: plant.name,
+      price: plant.price,
+      image: plant.image,
+      quantity: 1,
+      size: 'S',
+    };
+
+    return dispatch(addToCart(plantInfo));
+  };
 
   return (
     <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
@@ -16,7 +43,11 @@ function PlantItem({ plant }) {
           </S.PlantImage>
           <S.Icons className='icons'>
             <Icon type='icon-tubiaozhizuomoban-' className='heart' />
-            <Icon type='icon-cart1' className='cart' />
+            <Icon
+              type='icon-cart1'
+              className='cart'
+              onClick={(e) => addToCartHandler(e)}
+            />
           </S.Icons>
           {plant?.oldprice && (
             <S.Discount>
@@ -46,14 +77,6 @@ S.PlantImageContainer = styled.div`
   @media screen and (min-width: 992px) {
     padding: 3rem;
   }
-
-  &:hover {
-    .icons {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(-50%, -10%);
-    }
-  }
 `;
 
 S.PlantItem = styled.div`
@@ -63,6 +86,14 @@ S.PlantItem = styled.div`
   border-top: 2px solid transparent;
   transition: all ease 0.3s;
   width: 100%;
+
+  &:hover {
+    .icons {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -10%);
+    }
+  }
 
   @media screen and (min-width: 576px) {
     width: 33%;

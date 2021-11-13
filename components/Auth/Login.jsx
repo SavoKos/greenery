@@ -57,12 +57,12 @@ function Login() {
       });
   };
 
-  const updateProfileHandler = (userData) => {
+  const updateProfileHandler = async (userData) => {
     updateProfile(auth.currentUser, {
       displayName: username,
     }).catch((error) => setError(error.message));
 
-    setDoc(doc(firestore, 'users', userData.uid), {
+    await setDoc(doc(firestore, 'users', userData.uid), {
       name: username,
       email: email,
     }).catch((error) => setError(error.message));

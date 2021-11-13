@@ -2,11 +2,36 @@ import Icon from '@components/UI/Icon';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, updateCartItem } from 'redux/cartSlice';
 
 function Hero({ plant }) {
-  const [itemCount, setItemCount] = useState(1);
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
   const [size, setSize] = useState('S');
   const [image, setImage] = useState(plant.image);
+  const [itemCount, setItemCount] = useState(1);
+
+  const addToCartHandler = () => {
+    if (cartItems.find((item) => item.name === plant.name)) {
+      const plantCopy = JSON.parse(JSON.stringify(cartItems))[0];
+      plantCopy.quantity = itemCount || 1;
+      plantCopy.size = size || 'S';
+
+      return dispatch(updateCartItem(plantCopy));
+    }
+
+    const plantInfo = {
+      name: plant.name,
+      price: plant.price,
+      image: plant.image,
+      quantity: itemCount || 1,
+      size: size || 'S',
+    };
+
+    return dispatch(addToCart(plantInfo));
+  };
 
   return (
     <S.Hero>
@@ -64,7 +89,9 @@ function Hero({ plant }) {
             onClick={() => setItemCount((prevItemCount) => prevItemCount + 1)}
           />
           <button className='buynow'>BUY NOW</button>
-          <button className='addtocart'>ADD TO CART</button>
+          <button className='addtocart' onClick={addToCartHandler}>
+            ADD TO CART
+          </button>
           <button>
             <Icon className='heart' type='icon-tubiaozhizuomoban-' />
           </button>
