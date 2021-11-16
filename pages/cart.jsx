@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import Footer from '@components/Footer';
 import Head from 'next/head';
 
-export default function cart() {
+export default function Cart() {
   const { cartItems } = useSelector((state) => state.cart);
 
   return (
