@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import CartItem from './CartItem';
+import Link from 'next/link';
 
 function Hero() {
   const { cartItems } = useSelector((state) => state.cart);
@@ -51,7 +52,9 @@ function Hero() {
           <h4 className='price'>$ {subTotal() + 10}.00</h4>
         </S.Total>
         <button>Proceed To Checkout</button>
-        <h4 className='continue'>Continue Shopping</h4>
+        <Link href='/'>
+          <h4 className='continue'>Continue Shopping</h4>
+        </Link>
       </S.Totals>
     </S.Hero>
   );

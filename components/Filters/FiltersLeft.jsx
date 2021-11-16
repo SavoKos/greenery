@@ -94,6 +94,8 @@ S.Filters = styled.div`
   background-color: #f5f5f5;
   width: 100%;
   padding: 1rem 2rem;
+  overflow: auto;
+  position: relative;
 
   .close-sidebar {
     @media screen and (min-width: 850px) {

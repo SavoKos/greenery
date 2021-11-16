@@ -4,6 +4,7 @@ import Icon from './UI/Icon';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, updateCartItem } from 'redux/cartSlice';
+import Router from 'next/router';
 
 function PlantItem({ plant }) {
   const { cartItems } = useSelector((state) => state.cart);
@@ -15,9 +16,13 @@ function PlantItem({ plant }) {
 
   const addToCartHandler = (e) => {
     e.preventDefault();
+    Router.push('/cart');
 
-    if (cartItems.find((item) => item.name === plant.name)) {
-      const plantCopy = JSON.parse(JSON.stringify(cartItems))[0];
+    const currentPlantInCard = cartItems.find(
+      (item) => item.name === plant.name
+    );
+    if (currentPlantInCard) {
+      const plantCopy = JSON.parse(JSON.stringify(currentPlantInCard));
       plantCopy.quantity += 1;
 
       return dispatch(updateCartItem(plantCopy));

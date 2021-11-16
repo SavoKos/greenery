@@ -88,7 +88,7 @@ S.Container = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 40;
 `;
 
 S.Navigation = styled.div`

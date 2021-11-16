@@ -4,9 +4,9 @@ import PlantItem from '@components/PlantItem';
 
 function RelatedProducts({ plant }) {
   const { initialPlants } = useSelector((state) => state.filters);
-  const relatedPlants = initialPlants.filter(
-    (p) => p.habit === (plant?.habit || initialPlants[0].habit)
-  );
+  const relatedPlants = initialPlants
+    .filter((p) => p.habit === (plant?.habit || initialPlants[0].habit))
+    .slice(0, 5);
 
   return (
     <S.Related>

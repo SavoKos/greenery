@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, updateCartItem } from 'redux/cartSlice';
+import Router from 'next/router';
 
 function Hero({ plant }) {
   const { cartItems } = useSelector((state) => state.cart);
@@ -14,8 +15,14 @@ function Hero({ plant }) {
   const [itemCount, setItemCount] = useState(1);
 
   const addToCartHandler = () => {
-    if (cartItems.find((item) => item.name === plant.name)) {
-      const plantCopy = JSON.parse(JSON.stringify(cartItems))[0];
+    Router.push('/cart');
+
+    const currentPlantInCard = cartItems.find(
+      (item) => item.name === plant.name
+    );
+
+    if (currentPlantInCard) {
+      const plantCopy = JSON.parse(JSON.stringify(currentPlantInCard));
       plantCopy.quantity = itemCount || 1;
       plantCopy.size = size || 'S';
 

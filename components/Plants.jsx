@@ -109,18 +109,17 @@ S.PlantsList = styled.div`
 `;
 
 S.FiltersSidebar = styled.div`
+  z-index: 50;
   position: relative;
   visibility: ${({ filterActive }) => (filterActive ? 'visible' : 'hidden')};
   opacity: ${({ filterActive }) => (filterActive ? '1' : '0')};
   transition: all ease 0.3s;
-  z-index: 6;
 
   @media screen and (min-width: 850px) {
     display: none;
   }
 
   .filter {
-    z-index: 5;
     width: 50%;
     display: block !important;
     position: fixed;

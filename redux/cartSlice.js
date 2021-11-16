@@ -14,9 +14,12 @@ export const cartSlice = createSlice({
     removeFromCart: (state, { payload }) => {},
 
     updateCartItem: (state, { payload }) => {
+      console.log(payload);
       const newCartItems = state.cartItems.map(
         (obj) => [payload].find((o) => o.name === obj.name) || obj
       );
+
+      console.log(newCartItems);
       state.cartItems = newCartItems;
     },
     deleteCartItem: (state, { payload }) => {

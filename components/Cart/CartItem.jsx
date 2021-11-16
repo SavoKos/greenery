@@ -6,6 +6,7 @@ import Size from './Size';
 import Icon from '@components/UI/Icon';
 import { useDispatch } from 'react-redux';
 import { deleteCartItem } from 'redux/cartSlice';
+import Link from 'next/link';
 
 function CartItem({ plant }) {
   const { cartItems } = useSelector((state) => state.cart);
@@ -14,12 +15,14 @@ function CartItem({ plant }) {
 
   return (
     <S.CartItem>
-      <S.Product>
-        <S.Image>
-          <Image src={plant.image} layout='fill' />
-        </S.Image>
-        <h4 className='name'>{plant.name}</h4>
-      </S.Product>
+      <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
+        <S.Product>
+          <S.Image>
+            <Image src={plant.image} layout='fill' />
+          </S.Image>
+          <h4 className='name'>{plant.name}</h4>
+        </S.Product>
+      </Link>
       <h4 className='price'>$ {plant.price}</h4>
       <CartQuantity plant={plant} />
       <Size plant={plant} />
@@ -62,6 +65,7 @@ S.CartItem = styled.div`
 S.Product = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   .name {
     margin-left: 0.5rem;
