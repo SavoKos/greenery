@@ -6,8 +6,9 @@ import { useSelector } from 'react-redux';
 import Footer from '@components/Footer';
 import Head from 'next/head';
 
-function cart() {
+export default function cart() {
   const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <>
       <Head>
@@ -30,5 +31,3 @@ const S = {};
 S.CartContainer = styled.div`
   padding: 0 5%;
 `;
-
-export default cart;
