@@ -5,11 +5,13 @@ import Footer from '@components/Footer';
 
 function Wishlist() {
   return (
-    <S.Container>
+    <>
       <Navigation />
-      <Hero />
+      <S.Container>
+        <Hero />
+      </S.Container>
       <Footer />
-    </S.Container>
+    </>
   );
 }
 

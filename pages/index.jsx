@@ -38,12 +38,12 @@ export default function Home() {
         />
         <link href='https://greenery.savokos.com' rel='canonical' />
       </Head>
+      <Navigation />
       <S.Container>
-        <Navigation />
         <Hero scrollRef={scrollRef} />
         <Plants scrollRef={scrollRef} />
-        <Footer />
       </S.Container>
+      <Footer />
     </>
   );
 }

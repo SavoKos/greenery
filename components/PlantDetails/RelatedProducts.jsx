@@ -36,12 +36,34 @@ S.Related = styled.div`
 S.Plants = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1500px) {
+    flex-wrap: nowrap;
+  }
 
   .plant-item {
-    margin: 0;
+    /* margin: 0; */
+    margin: 2rem 0;
+    width: 100%;
 
-    &:not(:nth-of-type(1)) {
-      margin-left: 0.5rem;
+    @media screen and (min-width: 768px) {
+      width: 46%;
+
+      &:not(:nth-of-type(1)) {
+        margin-left: 0.5rem;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      width: 33%;
     }
   }
 `;

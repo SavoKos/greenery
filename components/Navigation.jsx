@@ -91,6 +91,10 @@ S.Container = styled.div`
   position: sticky;
   top: 0;
   z-index: 40;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 5%;
+  }
 `;
 
 S.Navigation = styled.div`

@@ -84,17 +84,19 @@ function Hero({ plant }) {
           </S.Size>
         </S.SizesList>
         <S.Buy>
-          <Icon
-            type='icon-minus-circle-fill'
-            onClick={() =>
-              setItemCount((count) => (count === 1 ? 1 : count - 1))
-            }
-          />
-          <h3>{itemCount}</h3>
-          <Icon
-            type='icon-plus-circle-fill'
-            onClick={() => setItemCount((prevItemCount) => prevItemCount + 1)}
-          />
+          <S.Quantity>
+            <Icon
+              type='icon-minus-circle-fill'
+              onClick={() =>
+                setItemCount((count) => (count === 1 ? 1 : count - 1))
+              }
+            />
+            <h3>{itemCount}</h3>
+            <Icon
+              type='icon-plus-circle-fill'
+              onClick={() => setItemCount((prevItemCount) => prevItemCount + 1)}
+            />
+          </S.Quantity>
           <button className='buynow'>BUY NOW</button>
           <button className='addtocart' onClick={addToCartHandler}>
             ADD TO CART
@@ -116,11 +118,28 @@ const S = {};
 S.Hero = styled.div`
   display: flex;
   margin-top: 3rem;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 S.Images = styled.div`
-  width: 50%;
   display: flex;
+  height: 30vh;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    height: 40vh;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 50%;
+    height: 400px;
+  }
 `;
 
 S.SmallContainer = styled.div`
@@ -145,7 +164,12 @@ S.Large = styled.div`
 `;
 
 S.Details = styled.div`
-  width: 50%;
+  width: 100%;
+  margin-top: 3rem;
+
+  @media screen and (min-width: 992px) {
+    width: 50%;
+  }
 
   h4 {
     margin: 1.5rem 0 1rem 0;
@@ -193,8 +217,9 @@ S.Size = styled.h4`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.3rem;
-  height: 2.3rem;
+
+  width: 2rem;
+  height: 2rem;
   font-weight: 500;
   margin: 0 0.8rem 0 0 !important;
   transition: all ease 0.3s;
@@ -207,10 +232,10 @@ S.Size = styled.h4`
   color: ${({ selectedSize, value, theme }) =>
     selectedSize === value && theme.colors.green};
 
-  /* &:nth-of-type(1) {
-    border: 2px solid ${({ theme }) => theme.colors.green};
-    color: ${({ theme }) => theme.colors.green};
-  } */
+  @media screen and (min-width: 768px) {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
 
   &:hover {
     border: 2px solid ${({ theme }) => theme.colors.green};
@@ -218,10 +243,17 @@ S.Size = styled.h4`
   }
 `;
 
+S.Quantity = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 S.Buy = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  flex-wrap: wrap;
 
   h3 {
     font-weight: 500;
@@ -232,24 +264,38 @@ S.Buy = styled.div`
 
   .anticon {
     color: ${({ theme }) => theme.colors.green};
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     cursor: pointer;
     transition: all ease 0.3s;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   button {
     outline: 0;
     border: 0;
     border: 1px solid ${({ theme }) => theme.colors.green};
-    padding: 0.5rem 1.7rem;
+    padding: 0.3rem 0.7rem;
     background-color: transparent;
-    margin-left: 1rem;
+    margin-right: 0.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.colors.green};
     font-weight: 600;
     border-radius: 0.5rem;
-    font-size: 16px;
+    font-size: 15px;
     transition: all ease 0.3s;
+    margin-top: 1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      padding: 0.5rem 1.7rem;
+
+      &:nth-of-type(3) {
+        padding: 0.35rem 0.5rem 0.15rem 0.5rem !important;
+      }
+    }
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.green};
@@ -261,7 +307,7 @@ S.Buy = styled.div`
     }
 
     &:nth-of-type(3) {
-      padding: 0.35rem 0.5rem 0.15rem 0.5rem;
+      padding: 0 0.4rem;
     }
 
     &:nth-of-type(1) {

@@ -41,6 +41,10 @@ function Footer() {
 const S = {};
 
 S.FooterContainer = styled.div`
+  @media screen and (min-width: 768px) {
+    padding: 0 5%;
+  }
+
   .copyright {
     text-align: center;
     font-weight: 500;
@@ -87,8 +91,10 @@ S.Logo = styled.div`
 S.RightSide = styled.div`
   h3 {
     font-size: 18px;
+    text-align: center;
 
     @media screen and (min-width: 768px) {
+      text-align: left;
       font-size: 22px;
     }
   }

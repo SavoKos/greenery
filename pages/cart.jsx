@@ -16,12 +16,12 @@ export default function Cart() {
         <meta name='description' content='Greenery Cart' />
         <link href='https://greenery.savokos.com/cart' rel='canonical' />
       </Head>
+      <Navigation />
       <S.CartContainer>
-        <Navigation />
         <Hero />
         {cartItems.length > 0 && <RelatedProducts />}
-        <Footer />
       </S.CartContainer>
+      <Footer />
     </>
   );
 }

@@ -6,6 +6,7 @@ import { auth, firestore } from '../../firebase';
 import { useEffect } from 'react';
 import PlantItem from '@components/PlantItem';
 import Spinner from '@components/UI/Spinner';
+import Head from 'next/head';
 
 function Hero() {
   const [user, setUser] = useState(null);
@@ -15,17 +16,14 @@ function Hero() {
   onAuthStateChanged(auth, (user) => setUser(user));
 
   useEffect(async () => {
-    setLoading(false);
     if (!user) return;
     const userRef = doc(firestore, 'users', auth.currentUser.uid);
     const usersRes = await getDoc(userRef);
-
     const usersSnap = usersRes.data();
 
     setWishlist(usersSnap.wishlist);
+    setLoading(false);
   }, [user]);
-
-  console.log();
 
   if (loading)
     return (
@@ -49,11 +47,20 @@ function Hero() {
     );
 
   return (
-    <S.Hero>
-      {wishlist.map((wish) => (
-        <PlantItem plant={wish} key={wish.name} />
-      ))}
-    </S.Hero>
+    <>
+      <Head>
+        <title>Greenery | Wishlist</title>
+        <meta name='description' content='Greenery Wishlist' />
+        <link href='https://greenery.savokos.com/wishlist' rel='canonical' />
+      </Head>
+      <S.Hero>
+        <S.Plants>
+          {wishlist.map((wish) => (
+            <PlantItem plant={wish} key={wish.name} />
+          ))}
+        </S.Plants>
+      </S.Hero>
+    </>
   );
 }
 
@@ -72,6 +79,10 @@ S.Spinner = styled.div`
   position: fixed;
   inset: 0;
   z-index: 50;
+`;
+
+S.Plants = styled.div`
+  display: flex;
 `;
 
 export default Hero;
