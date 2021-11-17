@@ -16,7 +16,7 @@ function Hero() {
   if (cartItems.length < 1)
     return (
       <S.Hero>
-        <h2>Your cart is empty</h2>
+        <h2>Your cart is empty.</h2>
       </S.Hero>
     );
 

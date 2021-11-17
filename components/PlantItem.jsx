@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, updateCartItem } from 'redux/cartSlice';
 import Router from 'next/router';
+import { doc, updateDoc, getDoc } from 'firebase/firestore/lite';
+import { firestore, auth } from '../firebase';
 
 function PlantItem({ plant }) {
   const { cartItems } = useSelector((state) => state.cart);
@@ -39,6 +41,34 @@ function PlantItem({ plant }) {
     return dispatch(addToCart(plantInfo));
   };
 
+  const addToWishlistHandler = async (e) => {
+    e.preventDefault();
+    if (!auth?.currentUser) return Router.push('/wishlist');
+
+    const userRef = doc(firestore, 'users', auth.currentUser.uid);
+    const usersRes = await getDoc(userRef);
+
+    const usersSnap = usersRes.data();
+    const wishlistSnap = [...usersSnap.wishlist];
+    const wishlistLength = wishlistSnap.length;
+
+    const wishlistItemConfig = {
+      name: plant.name,
+      price: plant.price,
+      image: plant.image,
+    };
+
+    if (wishlistLength > 0) wishlistSnap.push(wishlistItemConfig);
+    if (wishlistSnap.find((wishlistItem) => wishlistItem.name === plant.name))
+      return Router.push('/wishlist');
+
+    await updateDoc(userRef, {
+      wishlist: wishlistLength > 0 ? wishlistSnap : [wishlistItemConfig],
+    });
+
+    Router.push('/wishlist');
+  };
+
   return (
     <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
       <S.PlantItem className='plant-item'>
@@ -47,7 +77,11 @@ function PlantItem({ plant }) {
             <Image src={plant.image} layout='fill' />
           </S.PlantImage>
           <S.Icons className='icons'>
-            <Icon type='icon-tubiaozhizuomoban-' className='heart' />
+            <Icon
+              type='icon-tubiaozhizuomoban-'
+              className='heart'
+              onClick={(e) => addToWishlistHandler(e)}
+            />
             <Icon
               type='icon-cart1'
               className='cart'

@@ -24,12 +24,11 @@ export default function Navigation() {
   const logout = () => {
     setLoading(true);
     signOut(auth)
-      .then(() => setLoading(false))
+      .then(() => {
+        Router.push('/');
+        setLoading(false);
+      })
       .catch(() => setLoading(false));
-  };
-
-  const wishlistHandler = () => {
-    if (!auth.currentUser) return dispatch(setLoginActive(true));
   };
 
   const authIcon = () => {
@@ -66,7 +65,10 @@ export default function Navigation() {
         </S.Logo>
 
         <S.Icons>
-          <Icon type='icon-tubiaozhizuomoban-' onClick={wishlistHandler} />
+          <Icon
+            type='icon-tubiaozhizuomoban-'
+            onClick={() => Router.push('/wishlist')}
+          />
           <Icon
             type='icon-cart1'
             className='cart'

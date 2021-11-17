@@ -11,6 +11,7 @@ import {
 import { setDoc, doc } from 'firebase/firestore/lite';
 import Spinner from '@components/UI/Spinner';
 import { firestore, auth } from '../../firebase';
+import Router from 'next/router';
 
 function Login() {
   const { loginActive, registerActive } = useSelector((state) => state.auth);
@@ -34,6 +35,7 @@ function Login() {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         closeModal();
+        Router.push('/');
         setLoading(false);
       })
       .catch((error) => {
@@ -49,6 +51,7 @@ function Login() {
       .then((user) => {
         updateProfileHandler(user.user);
         closeModal();
+        Router.push('/');
         setLoading(false);
       })
       .catch((error) => {
@@ -65,6 +68,7 @@ function Login() {
     await setDoc(doc(firestore, 'users', userData.uid), {
       name: username,
       email: email,
+      wishlist: [],
     }).catch((error) => setError(error.message));
   };
 
