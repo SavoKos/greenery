@@ -21,7 +21,7 @@ export default function Home() {
         dispatch(updateInitialPlants(res.data));
         dispatch(updatePlants(res.data));
       }),
-    []
+    [dispatch]
   );
 
   if (plants.length < 1) return <Spinner />;

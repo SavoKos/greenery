@@ -18,7 +18,7 @@ function CartItem({ plant }) {
       <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
         <S.Product>
           <S.Image>
-            <Image src={plant.image} layout='fill' />
+            <Image src={plant.image} layout='fill' alt='Plant Image' />
           </S.Image>
           <h4 className='name'>{plant.name}</h4>
         </S.Product>
