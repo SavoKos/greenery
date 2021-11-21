@@ -74,7 +74,7 @@ function PlantItem({ plant }) {
       <S.PlantItem className='plant-item'>
         <S.PlantImageContainer>
           <S.PlantImage>
-            <Image src={plant.image} layout='fill' />
+            <Image src={plant.image} layout='fill' alt='Plant Image' />
           </S.PlantImage>
           <S.Icons className='icons'>
             <Icon

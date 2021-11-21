@@ -12,26 +12,19 @@ import FullDescription from '@components/PlantDetails/FullDescription';
 import RelatedProducts from '@components/PlantDetails/RelatedProducts';
 import Footer from '@components/Footer';
 
-export const getServerSideProps = async ({ query: { slug } }) => {
-  console.log(slug);
-  return {
-    props: {
-      slug,
-    },
-  };
-};
-
 function PlantDetails({ slug }) {
   const dispatch = useDispatch();
 
   console.log(slug);
 
+  const updatePlantsHandler = (plants) => {
+    dispatch(updateInitialPlants(plants));
+    dispatch(updatePlants(plants));
+  };
+
   useEffect(
     () =>
-      axios.get('/plants.json').then((res) => {
-        dispatch(updateInitialPlants(res.data));
-        dispatch(updatePlants(res.data));
-      }),
+      axios.get('/plants.json').then((res) => updatePlantsHandler(res.data)),
     []
   );
 
@@ -40,6 +33,7 @@ function PlantDetails({ slug }) {
     (plant) => plant.name.toLowerCase().split(' ').join('-') === slug
   )[0];
 
+  return <h1>E</h1>;
   if (!plant) return <Spinner />;
 
   return (
@@ -62,6 +56,15 @@ function PlantDetails({ slug }) {
     </>
   );
 }
+
+export const getServerSideProps = async ({ query: { slug } }) => {
+  console.log(slug);
+  return {
+    props: {
+      slug,
+    },
+  };
+};
 
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};

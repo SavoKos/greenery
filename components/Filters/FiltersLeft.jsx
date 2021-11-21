@@ -81,7 +81,7 @@ function FiltersLeft({ setFilterActive, executeScroll }) {
         </S.FilterContainer>
       </S.Filters>
       <S.SaleImg>
-        <Image src='/sale.webp' layout='fill' />
+        <Image src='/sale.webp' layout='fill' alt='Sale' />
       </S.SaleImg>
     </>
   );

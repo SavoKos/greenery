@@ -15,16 +15,18 @@ function Hero() {
 
   onAuthStateChanged(auth, (user) => setUser(user));
 
-  useEffect(async () => {
+  useEffect(() => {
+    async function fetchData() {
+      const userRef = doc(firestore, 'users', auth.currentUser.uid);
+      const usersRes = await getDoc(userRef);
+      const usersSnap = usersRes.data();
+      setWishlist(usersSnap.wishlist);
+      setLoading(false);
+      console.log(usersSnap.wishlist);
+    }
+
     if (!user) return setLoading(false);
-    const userRef = doc(firestore, 'users', auth.currentUser.uid);
-    const usersRes = await getDoc(userRef);
-    const usersSnap = usersRes.data();
-
-    console.log(usersSnap.wishlist);
-
-    setWishlist(usersSnap.wishlist);
-    setLoading(false);
+    fetchData();
   }, [user]);
 
   if (loading)

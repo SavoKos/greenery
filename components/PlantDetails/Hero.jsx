@@ -46,12 +46,12 @@ function Hero({ plant }) {
         <S.SmallContainer>
           {plant.allImages.map((img) => (
             <S.Small onClick={() => setImage(img)} key={img}>
-              <Image src={img} layout='fill' />
+              <Image src={img} layout='fill' alt='Plant Image' />
             </S.Small>
           ))}
         </S.SmallContainer>
         <S.Large>
-          <Image src={image} layout='fill' />
+          <Image src={image} layout='fill' alt='Plant Image' />
         </S.Large>
       </S.Images>
       <S.Details>
