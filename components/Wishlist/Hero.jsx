@@ -10,16 +10,18 @@ import Head from 'next/head';
 
 function Hero() {
   const [user, setUser] = useState(null);
-  const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState(null);
   const [loading, setLoading] = useState(true);
 
   onAuthStateChanged(auth, (user) => setUser(user));
 
   useEffect(async () => {
-    if (!user) return;
+    if (!user) return setLoading(false);
     const userRef = doc(firestore, 'users', auth.currentUser.uid);
     const usersRes = await getDoc(userRef);
     const usersSnap = usersRes.data();
+
+    console.log(usersSnap.wishlist);
 
     setWishlist(usersSnap.wishlist);
     setLoading(false);
@@ -39,7 +41,7 @@ function Hero() {
       </S.Hero>
     );
 
-  if (wishlist.length < 1)
+  if (wishlist?.length < 1)
     return (
       <S.Hero>
         <h2>Your wishlist is empty.</h2>
@@ -55,7 +57,7 @@ function Hero() {
       </Head>
       <S.Hero>
         <S.Plants>
-          {wishlist.map((wish) => (
+          {wishlist?.map((wish) => (
             <PlantItem plant={wish} key={wish.name} />
           ))}
         </S.Plants>

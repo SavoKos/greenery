@@ -13,6 +13,7 @@ import RelatedProducts from '@components/PlantDetails/RelatedProducts';
 import Footer from '@components/Footer';
 
 export const getServerSideProps = async ({ query: { slug } }) => {
+  console.log(slug);
   return {
     props: {
       slug,
@@ -22,6 +23,8 @@ export const getServerSideProps = async ({ query: { slug } }) => {
 
 function PlantDetails({ slug }) {
   const dispatch = useDispatch();
+
+  console.log(slug);
 
   useEffect(
     () =>
