@@ -14,7 +14,7 @@ function Order() {
         <h4>Total</h4>
       </S.OrderHeader>
       {cartItems.map((item) => (
-        <CheckoutItem plant={item} />
+        <CheckoutItem plant={item} key={item.name} />
       ))}
       <Total />
     </S.Order>
