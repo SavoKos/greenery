@@ -28,14 +28,6 @@ function PlantDetails({ slug }) {
   );
 }
 
-export const getServerSideProps = ({ query: { slug } }) => {
-  return {
-    props: {
-      slug,
-    },
-  };
-};
-
 // -------------------------------------------------- styling ----------------------------------------------
 const S = {};
 S.Container = styled.div`
