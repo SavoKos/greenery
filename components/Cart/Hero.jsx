@@ -2,23 +2,13 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import CartItem from './CartItem';
 import Link from 'next/link';
+import Total from '@components/Total';
+import CartEmpty from '@components/CartEmpty';
 
 function Hero() {
   const { cartItems } = useSelector((state) => state.cart);
 
-  const subTotal = () => {
-    if (cartItems.length > 0)
-      return cartItems
-        .map((item) => item.quantity * item.price)
-        .reduce((prevValue, currValue) => prevValue + currValue);
-  };
-
-  if (cartItems.length < 1)
-    return (
-      <S.Hero>
-        <h2>Your cart is empty.</h2>
-      </S.Hero>
-    );
+  if (cartItems.length < 1) return <CartEmpty />;
 
   return (
     <S.Hero>
@@ -39,19 +29,10 @@ function Hero() {
         <S.TotalsHeader>
           <h4>Cart Totals</h4>
         </S.TotalsHeader>
-        <S.Row>
-          <h4>Subtotal</h4>
-          <h4>$ {subTotal()}.00</h4>
-        </S.Row>
-        <S.Row>
-          <h4>Shipping</h4>
-          <h4>$ 10.00</h4>
-        </S.Row>
-        <S.Total>
-          <h4>Total</h4>
-          <h4 className='price'>$ {subTotal() + 10}.00</h4>
-        </S.Total>
-        <button>Proceed To Checkout</button>
+        <Total />
+        <Link href='/checkout'>
+          <button>Proceed To Checkout</button>
+        </Link>
         <Link href='/'>
           <h4 className='continue'>Continue Shopping</h4>
         </Link>
@@ -74,7 +55,7 @@ S.Hero = styled.div`
 `;
 
 S.Products = styled.div`
-  width: 65%;
+  width: 68%;
 `;
 
 S.Header = styled.div`
@@ -87,7 +68,7 @@ S.Header = styled.div`
 `;
 
 S.Totals = styled.div`
-  width: 25%;
+  width: 28%;
 
   button {
     background-color: ${({ theme }) => theme.colors.green};
@@ -115,28 +96,6 @@ S.Totals = styled.div`
 S.TotalsHeader = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   padding-bottom: 0.5rem;
-`;
-
-S.Row = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  h4 {
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
-`;
-
-S.Total = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 2rem 0 1rem 0;
-
-  .price {
-    color: ${({ theme }) => theme.colors.green};
-  }
 `;
 
 export default Hero;
