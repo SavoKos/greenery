@@ -33,7 +33,6 @@ function PlantDetails({ slug }) {
     (plant) => plant.name.toLowerCase().split(' ').join('-') === slug
   )[0];
 
-  return <h1>E</h1>;
   if (!plant) return <Spinner />;
 
   return (
@@ -57,8 +56,8 @@ function PlantDetails({ slug }) {
   );
 }
 
-export const getServerSideProps = async ({ query: { slug } }) => {
-  console.log(slug);
+export const getServerSideProps = (context) => {
+  const { slug } = context.query;
   return {
     props: {
       slug,

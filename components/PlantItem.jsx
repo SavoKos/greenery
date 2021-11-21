@@ -70,7 +70,10 @@ function PlantItem({ plant }) {
   };
 
   return (
-    <Link href={'/plant/' + plant.name.toLowerCase().split(' ').join('-')}>
+    <Link
+      href={'/plant/[slug]'}
+      as={`/plant/${plant.name.toLowerCase().split(' ').join('-')}`}
+    >
       <S.PlantItem className='plant-item'>
         <S.PlantImageContainer>
           <S.PlantImage>
