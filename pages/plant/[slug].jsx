@@ -15,6 +15,8 @@ import Footer from '@components/Footer';
 function PlantDetails({ slug }) {
   const dispatch = useDispatch();
 
+  console.log(slug);
+
   useEffect(
     () =>
       axios.get('/plants.json').then((res) => {
@@ -52,12 +54,8 @@ function PlantDetails({ slug }) {
   );
 }
 
-export const getServerSideProps = async ({ query: { slug } }) => {
-  return {
-    props: {
-      slug,
-    },
-  };
+PlantDetails.getInitialProps = async ({ query: { slug } }) => {
+  return { slug };
 };
 
 // -------------------------------------------------- styling ----------------------------------------------
