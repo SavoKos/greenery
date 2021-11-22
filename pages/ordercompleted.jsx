@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from 'redux/cartSlice';
 import styled from 'styled-components';
 
-function ordercompleted() {
+function OrderCompleted() {
   const dispatch = useDispatch();
   const { orderDetails } = useSelector((state) => state.order);
 
@@ -50,4 +50,4 @@ S.Container = styled.div`
   }
 `;
 
-export default ordercompleted;
+export default OrderCompleted;
