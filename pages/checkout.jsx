@@ -44,6 +44,11 @@ S.Checkout = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+  flex-direction: column;
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 export default Checkout;

@@ -1,8 +1,32 @@
+import Router from 'next/router';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateOrderDetails, updateOrderCompleted } from 'redux/orderSlice';
 import styled from 'styled-components';
 
 function Address() {
+  const dispatch = useDispatch();
+  const { orderDetails } = useSelector((state) => state.order);
+  console.log(orderDetails);
+
   const placeOrderHandler = (e) => {
     e.preventDefault();
+
+    const form = e.target;
+
+    const order = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      country: form.country.value,
+      city: form.city.value,
+      street: form.street.value,
+      appartement: form.appartement.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      note: form.note.value,
+    };
+
+    dispatch(updateOrderDetails(order));
+    Router.push('/ordercompleted');
   };
 
   return (
@@ -14,34 +38,35 @@ function Address() {
             <label htmlFor='firstName'>
               First Name <span>*</span>
             </label>
-            <input type='text' id='firstName' required />
+            <input type='text' id='firstName' name='firstName' required />
           </S.Field>
           <S.Field>
             <label htmlFor='lastName'>
               Last Name <span>*</span>
             </label>
-            <input type='text' id='lastName' required />
+            <input type='text' id='lastName' name='lastName' required />
           </S.Field>
           <S.Field>
             <label htmlFor='Country'>
-              Country / Region <span>*</span>
+              Country <span>*</span>
             </label>
-            <input type='text' id='Country' required />
+            <input type='text' id='Country' name='country' required />
           </S.Field>
           <S.Field>
             <label htmlFor='City'>
               City / Town <span>*</span>
             </label>
-            <input type='text' id='City' required />
+            <input type='text' id='City' name='city' required />
           </S.Field>
           <S.Field>
-            <label htmlFor='address'>
+            <label htmlFor='street'>
               Street Address <span>*</span>
             </label>
             <input
               type='text'
-              id='address'
+              id='street'
               placeholder='Street name and house number'
+              name='street'
               required
             />
           </S.Field>
@@ -50,6 +75,7 @@ function Address() {
             <input
               type='text'
               id='appartement'
+              name='appartement'
               placeholder='Appartement, suite, unit, etc. (optional)'
             />
           </S.Field>
@@ -57,17 +83,17 @@ function Address() {
             <label htmlFor='email'>
               Email Address <span>*</span>
             </label>
-            <input type='email' id='email' required />
+            <input type='email' id='email' name='email' required />
           </S.Field>
           <S.Field>
             <label htmlFor='phone'>
               Phone Number <span>*</span>
             </label>
-            <input type='tel' id='phone' required />
+            <input type='tel' id='phone' name='phone' required />
           </S.Field>
           <S.Field className='note'>
             <label htmlFor='note'>Order Notes (optional)</label>
-            <textarea id='note' cols='30' rows='5'></textarea>
+            <textarea id='note' cols='30' rows='5' name='note'></textarea>
           </S.Field>
           <S.Field>
             <button>Place Order</button>
@@ -82,10 +108,18 @@ function Address() {
 const S = {};
 
 S.Address = styled.div`
-  width: 68%;
+  width: 100%;
 
   h3 {
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 58%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 68%;
   }
 `;
 
@@ -110,6 +144,14 @@ S.Field = styled.div`
     border-radius: 0.5rem;
     font-size: 14px;
     width: 100%;
+  }
+
+  label {
+    font-size: 14px;
+
+    @media screen and (min-width: 992px) {
+      font-size: 16px;
+    }
   }
 
   span {

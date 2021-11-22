@@ -25,7 +25,7 @@ function Order() {
 const S = {};
 
 S.Order = styled.div`
-  width: 28%;
+  width: 100%;
   margin-top: 3rem;
 
   h3 {
@@ -34,6 +34,14 @@ S.Order = styled.div`
 
   h4 {
     font-weight: 500;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 38%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 28%;
   }
 `;
 
