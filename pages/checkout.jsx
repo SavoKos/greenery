@@ -5,29 +5,31 @@ import Navigation from '@components/Navigation';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import CartEmpty from '@components/CartEmpty';
+import Head from 'next/head';
 
 function Checkout() {
   const { cartItems } = useSelector((state) => state.cart);
 
-  if (cartItems.length < 1)
-    return (
-      <>
-        <Navigation />
-        <S.Container>
-          <CartEmpty />
-        </S.Container>
-        <Footer />
-      </>
-    );
-
   return (
     <>
+      <Head>
+        <title>Greenery | Checkout</title>
+        <meta
+          name='description'
+          content='Enter your information to complete order.'
+        />
+        <link href='https://greenery.savokos.com' rel='canonical' />
+      </Head>
       <Navigation />
       <S.Container>
-        <S.Checkout>
-          <Address />
-          <Order />
-        </S.Checkout>
+        {cartItems.length < 1 ? (
+          <CartEmpty />
+        ) : (
+          <S.Checkout>
+            <Address />
+            <Order />
+          </S.Checkout>
+        )}
       </S.Container>
       <Footer />
     </>

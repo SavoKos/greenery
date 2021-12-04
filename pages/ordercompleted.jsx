@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from 'redux/cartSlice';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 function OrderCompleted() {
   const dispatch = useDispatch();
@@ -21,6 +22,13 @@ function OrderCompleted() {
 
   return (
     <>
+      <Head>
+        <title>Greenery | Order Completed</title>
+        <link
+          href='https://greenery.savokos.com/ordercompleted'
+          rel='canonical'
+        />
+      </Head>
       <Navigation />
       <S.Container>
         <Icon type='icon-success' />

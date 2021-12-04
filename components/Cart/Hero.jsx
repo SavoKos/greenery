@@ -48,6 +48,11 @@ S.Hero = styled.div`
   margin-top: 3rem;
   justify-content: space-between;
   min-height: 50vh;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 
   h2 {
     margin: 0 auto;
@@ -55,7 +60,11 @@ S.Hero = styled.div`
 `;
 
 S.Products = styled.div`
-  width: 68%;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 68%;
+  }
 `;
 
 S.Header = styled.div`
@@ -68,7 +77,11 @@ S.Header = styled.div`
 `;
 
 S.Totals = styled.div`
-  width: 28%;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 28%;
+  }
 
   button {
     background-color: ${({ theme }) => theme.colors.green};
