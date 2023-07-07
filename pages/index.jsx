@@ -36,7 +36,7 @@ export default function Home() {
           trendy plants. Use our plants to create an unique Urban Jungle.
           Order your favorite plants!'
         />
-        <link href='https://greenery.savokos.com' rel='canonical' />
+        <link href='https://greenery.savo-kos.com' rel='canonical' />
       </Head>
       <Navigation />
       <S.Container>

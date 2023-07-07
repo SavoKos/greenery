@@ -39,7 +39,7 @@ function PlantDetails({ slug }) {
         <title>Greenery | {plant?.name}</title>
         <meta name='description' content={plant?.description} />
         <link
-          href={'https://greenery.savokos.com/plants' + slug}
+          href={'https://greenery.savo-kos.com/plants' + slug}
           rel='canonical'
         />
       </Head>
