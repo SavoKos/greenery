@@ -55,7 +55,7 @@ function Hero() {
       <Head>
         <title>Greenery | Wishlist</title>
         <meta name='description' content='Greenery Wishlist' />
-        <link href='https://greenery.savo-kos.com/wishlist' rel='canonical' />
+        <link href='https://greenery.savokos.com/wishlist' rel='canonical' />
       </Head>
       <S.Hero>
         <S.Plants>

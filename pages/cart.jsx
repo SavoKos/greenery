@@ -14,7 +14,7 @@ export default function Cart() {
       <Head>
         <title>Greenery | Cart</title>
         <meta name='description' content='Greenery Cart' />
-        <link href='https://greenery.savo-kos.com/cart' rel='canonical' />
+        <link href='https://greenery.savokos.com/cart' rel='canonical' />
       </Head>
       <Navigation />
       <S.CartContainer>

@@ -1,5 +1,5 @@
-<p align="center"><a href="https://greenery.savo-kos.com" target="_blank" rel="noopener noreferrer"><img width="100" src="https://res.cloudinary.com/dicynt7ms/image/upload/v1637852245/important/logo_bbqect.webp"></a></p>
-<h1 align="center"><a href="https://greenery.savo-kos.com" target="_blank" rel="noopener noreferrer">Greenery</a></h1>
+<p align="center"><a href="https://greenery.savokos.com" target="_blank" rel="noopener noreferrer"><img width="100" src="https://res.cloudinary.com/dicynt7ms/image/upload/v1637852245/important/logo_bbqect.webp"></a></p>
+<h1 align="center"><a href="https://greenery.savokos.com" target="_blank" rel="noopener noreferrer">Greenery</a></h1>
 
 <br>
 
@@ -8,7 +8,7 @@
 ![Project Image2](https://res.cloudinary.com/dicynt7ms/image/upload/v1637852257/important/screencapture-greenery-savokos-cart-2021-11-25-15_52_20_rkaurj.png)
 ![Project Image3](https://res.cloudinary.com/dicynt7ms/image/upload/v1637852257/important/screencapture-greenery-savokos-checkout-2021-11-25-15_54_51_x0rdur.png)
 
-![LiveWebsite](https://res.cloudinary.com/dicynt7ms/image/upload/w_20,h_20/v1630442590/important/NicePng_website-png_187940_pizwnr.png) <span>Live website - <a href="https://greenery.savo-kos.com" target="_blank" rel="noopener noreferrer"> greenery.savo-kos.com</a></span>
+![LiveWebsite](https://res.cloudinary.com/dicynt7ms/image/upload/w_20,h_20/v1630442590/important/NicePng_website-png_187940_pizwnr.png) <span>Live website - <a href="https://greenery.savokos.com" target="_blank" rel="noopener noreferrer"> greenery.savokos.com</a></span>
 
 ### Table of Contents
 
@@ -70,5 +70,5 @@ SOFTWARE.
 
 ## Author Info
 
-- Upwork - [Savo Kos](https://links.savo-kos.com/upwork)
-- Website - [savo-kos.com](https://savo-kos.com)
+- Upwork - [Savo Kos](https://links.savokos.com/upwork)
+- Website - [savokos.com](https://savokos.com)

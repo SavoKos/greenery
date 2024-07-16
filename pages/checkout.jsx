@@ -18,7 +18,7 @@ function Checkout() {
           name='description'
           content='Enter your information to complete order.'
         />
-        <link href='https://greenery.savo-kos.com' rel='canonical' />
+        <link href='https://greenery.savokos.com' rel='canonical' />
       </Head>
       <Navigation />
       <S.Container>

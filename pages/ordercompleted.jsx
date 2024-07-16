@@ -25,7 +25,7 @@ function OrderCompleted() {
       <Head>
         <title>Greenery | Order Completed</title>
         <link
-          href='https://greenery.savo-kos.com/ordercompleted'
+          href='https://greenery.savokos.com/ordercompleted'
           rel='canonical'
         />
       </Head>
